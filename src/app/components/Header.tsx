@@ -66,7 +66,7 @@ function NavItem({ item }: { item: MenuItem }) {
     >
       <Link
         href={item.href}
-        className="flex items-center gap-1 px-3 py-6 text-[14px] font-semibold uppercase tracking-wide text-[#03254B] hover:text-[#C93523] transition-colors whitespace-nowrap"
+        className="flex items-center gap-1 px-3 py-4 text-[13px] font-semibold uppercase tracking-wide text-[#03254B] hover:text-[#C93523] transition-colors whitespace-nowrap"
         style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
       >
         {item.label}
@@ -146,57 +146,43 @@ export default function Header() {
 
   return (
     <header className="bg-white sticky top-0 z-50 shadow-sm">
-      {/* Top bar with tagline */}
-      <div className="bg-[#03254B] text-white text-[12px] uppercase tracking-wider">
-        <div className="max-w-[1280px] mx-auto px-6 py-2 flex items-center justify-between">
-          <span style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}>
-            Experienced. Personable. Effective.
-          </span>
-          <div className="hidden md:flex items-center gap-4">
-            <span>Jacksonville, FL</span>
-            <span>|</span>
-            <span>Serving Florida &amp; Georgia</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Main header */}
-      <div className="max-w-[1280px] mx-auto flex items-center justify-between px-6 py-4">
+      {/* Main header: logo + nav + phone on one row */}
+      <div className="max-w-[1280px] mx-auto flex items-center justify-between px-6 py-3 gap-6">
         <Link href="/" className="flex-shrink-0">
           <Image
             src="/images/logo.jpg"
             alt="Law Office of A. James Mullaney"
-            width={320}
-            height={85}
+            width={280}
+            height={74}
             priority
-            className="h-[72px] w-auto"
+            className="h-[60px] w-auto"
           />
         </Link>
 
-        <div className="flex items-center gap-4">
-          <div className="text-right hidden lg:block">
-            <p
-              className="text-[11px] uppercase tracking-wider text-gray-500 mb-1"
-              style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+        <nav className="hidden lg:block flex-1">
+          <ul className="flex items-center justify-center">
+            {navigation.map((item) => (
+              <NavItem key={item.label} item={item} />
+            ))}
+          </ul>
+        </nav>
+
+        <div className="flex items-center gap-3 flex-shrink-0">
+          <a
+            href="tel:+1-904-364-4565"
+            className="hidden lg:inline-flex items-center gap-2 bg-[#C93523] hover:bg-[#a82b1c] text-white font-bold text-[15px] px-5 py-3 transition-colors"
+            style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4"
+              viewBox="0 0 20 20"
+              fill="currentColor"
             >
-              Call For A Consultation
-            </p>
-            <a
-              href="tel:+1-904-364-4565"
-              className="inline-flex items-center gap-2 bg-[#C93523] hover:bg-[#a82b1c] text-white font-bold text-[16px] px-5 py-2 transition-colors"
-              style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-              </svg>
-              904-364-4565
-            </a>
-          </div>
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+            </svg>
+            904-364-4565
+          </a>
 
           <button
             className="lg:hidden p-2"
@@ -214,17 +200,6 @@ export default function Header() {
           </button>
         </div>
       </div>
-
-      {/* Navigation bar */}
-      <nav className="border-t border-gray-100 bg-white hidden lg:block">
-        <div className="max-w-[1280px] mx-auto px-6">
-          <ul className="flex items-center justify-center">
-            {navigation.map((item) => (
-              <NavItem key={item.label} item={item} />
-            ))}
-          </ul>
-        </div>
-      </nav>
 
       {/* Mobile menu */}
       {mobileOpen && (

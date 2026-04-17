@@ -28,12 +28,12 @@ function Hero() {
             Experienced. Personable. Effective.
           </p>
           <h1
-            className="text-white text-[42px] lg:text-[56px] leading-[1.05] font-bold uppercase mb-6"
+            className="text-white text-[42px] lg:text-[56px] leading-[1.05] uppercase mb-6"
             style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
           >
-            An Experienced{" "}
-            <span className="block">Family Law Attorney</span>
-            <span className="block">And Mediator</span>
+            <span className="font-normal">An Experienced</span>
+            <span className="block font-bold">Family Law Attorney</span>
+            <span className="block font-normal">And Mediator</span>
           </h1>
           <p className="text-white/90 text-[17px] leading-[1.7] mb-8 max-w-[560px]">
             Education, collaboration and efficiency are the cornerstones of my
@@ -73,70 +73,103 @@ function Hero() {
   );
 }
 
-/* ─── Practice Areas ─── */
-function PracticeAreas() {
-  const items = [
-    { icon: "/images/divorce-icon.webp", label: "Divorce & Separation", href: "/divorce" },
-    { icon: "/images/un-divorce-icon.webp", label: "Uncontested Divorce", href: "/divorce/uncontested-divorce-in-jacksonville-fl" },
-    { icon: "/images/child-icon.webp", label: "Child Support Calculator", href: "/florida-child-support-calculator" },
-    { icon: "/images/paternity-icon.webp", label: "Paternity", href: "/paternity" },
-    { icon: "/images/mediation-icon.webp", label: "Mediation", href: "/divorce/divorce-mediation-in-jacksonville" },
-    { icon: "/images/parent-icon.webp", label: "Parenting Plans", href: "/time-sharing-and-visitation-in-florida" },
-  ];
-
+/* ─── Practice Areas (diamond layout) ─── */
+function PracticeAreaIcon({
+  icon,
+  label,
+  href,
+}: {
+  icon: string;
+  label: string;
+  href: string;
+}) {
   return (
-    <section className="bg-white py-20 relative overflow-hidden">
-      <div
-        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+    <Link
+      href={href}
+      className="group flex flex-col items-center text-center w-[200px]"
+    >
+      <Image
+        src={icon}
+        alt={label}
+        width={96}
+        height={96}
+        className="mb-4 transition-transform group-hover:-translate-y-1"
         style={{
-          backgroundImage: 'url("/images/patterns-bg.png")',
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          filter:
+            "brightness(0) saturate(100%) invert(11%) sepia(40%) saturate(3500%) hue-rotate(215deg) brightness(80%) contrast(100%)",
         }}
       />
+      <span
+        className="text-[#03254B] text-[15px] font-medium leading-[1.4] group-hover:text-[#C93523] transition-colors"
+        style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+      >
+        {label}
+      </span>
+    </Link>
+  );
+}
+
+function PracticeAreas() {
+  return (
+    <section className="bg-white pt-20 pb-24 relative overflow-hidden">
       <div className="relative max-w-[1280px] mx-auto px-6">
-        <div className="text-center mb-12">
-          <p
-            className="text-[#C93523] text-[13px] font-semibold uppercase tracking-[2px] mb-4"
-            style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
-          >
-            A Jacksonville Attorney And Certified Family Court Mediator
-            <br />
-            Practicing Exclusively In Family Law For 25 Years
-          </p>
-          <h2
-            className="text-[#03254B] text-[42px] font-bold uppercase mb-3"
-            style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
-          >
-            Practice Areas
-          </h2>
-          <div className="red-divider mx-auto" />
+        <p
+          className="text-center text-[#03254B] text-[15px] italic mb-16 max-w-[720px] mx-auto"
+          style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+        >
+          A Jacksonville Attorney And Certified Family Court Mediator
+          Practicing Exclusively In Family Law For 25 Years
+        </p>
+
+        {/* Top row: 2 icons */}
+        <div className="flex justify-center gap-16 mb-12">
+          <PracticeAreaIcon
+            icon="/images/divorce-icon.webp"
+            label="Divorce & Separation"
+            href="/divorce"
+          />
+          <PracticeAreaIcon
+            icon="/images/un-divorce-icon.webp"
+            label="Uncontested Divorce"
+            href="/divorce/uncontested-divorce-in-jacksonville-fl"
+          />
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-          {items.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className="group flex flex-col items-center text-center p-8 bg-white border border-gray-200 hover:border-[#C93523] hover:shadow-xl transition-all"
+        {/* Middle row: icon / heading / icon */}
+        <div className="flex justify-center items-center gap-16 mb-12">
+          <PracticeAreaIcon
+            icon="/images/child-icon.webp"
+            label="Child Support Calculator"
+            href="/florida-child-support-calculator"
+          />
+          <div className="flex flex-col items-center w-[200px]">
+            <h2
+              className="text-[#03254B] text-[36px] font-normal mb-4 text-center"
+              style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
             >
-              <div className="w-20 h-20 rounded-full bg-[#131E4D] group-hover:bg-[#C93523] flex items-center justify-center mb-5 transition-colors">
-                <Image
-                  src={item.icon}
-                  alt={item.label}
-                  width={48}
-                  height={48}
-                  style={{ filter: "brightness(0) invert(1)" }}
-                />
-              </div>
-              <span
-                className="text-[#03254B] text-[16px] font-semibold uppercase tracking-wide"
-                style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
-              >
-                {item.label}
-              </span>
-            </Link>
-          ))}
+              Practice Areas
+            </h2>
+            <div className="red-divider" />
+          </div>
+          <PracticeAreaIcon
+            icon="/images/paternity-icon.webp"
+            label="Paternity"
+            href="/paternity"
+          />
+        </div>
+
+        {/* Bottom row: 2 icons */}
+        <div className="flex justify-center gap-16">
+          <PracticeAreaIcon
+            icon="/images/mediation-icon.webp"
+            label="Mediation"
+            href="/divorce/divorce-mediation-in-jacksonville"
+          />
+          <PracticeAreaIcon
+            icon="/images/parent-icon.webp"
+            label="Parenting Plans"
+            href="/time-sharing-and-visitation-in-florida"
+          />
         </div>
       </div>
     </section>
@@ -381,27 +414,36 @@ function CTASection() {
           As a lawyer and certified mediator with a quarter century of
           experience, I know how to effectively resolve family law issues. I
           understand the importance of keeping down costs while providing a high
-          level of service.
-        </p>
-        <p className="text-white text-[20px] font-bold uppercase mb-8 tracking-wide">
-          If You Have Questions, I Have Answers!
-        </p>
-        <div className="flex flex-wrap justify-center gap-4">
+          level of service. If you are ready to speak with an attorney, call me
+          now at{" "}
           <a
             href="tel:+1-904-364-4565"
-            className="bg-[#C93523] hover:bg-[#a82b1c] text-white uppercase font-bold tracking-wider text-[14px] px-8 py-4 transition-colors"
-            style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+            className="underline font-semibold text-white"
           >
-            Call 904-364-4565
+            904-364-4565
           </a>
-          <Link
-            href="/contact"
-            className="border-2 border-white text-white uppercase font-bold tracking-wider text-[14px] px-8 py-4 hover:bg-white hover:text-[#131E4D] transition-all"
-            style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
-          >
-            Send A Message
+          . You can also reach me using my{" "}
+          <Link href="/contact" className="underline font-semibold text-white">
+            online contact form
           </Link>
-        </div>
+          .
+        </p>
+      </div>
+    </section>
+  );
+}
+
+/* ─── "If You Have Questions" red bar ─── */
+function QuestionsBar() {
+  return (
+    <section className="bg-[#C93523] py-6">
+      <div className="max-w-[1280px] mx-auto px-6 text-center">
+        <p
+          className="text-white text-[26px] lg:text-[32px] font-bold uppercase tracking-wide"
+          style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+        >
+          If You Have Questions, I Have Answers!
+        </p>
       </div>
     </section>
   );
@@ -420,6 +462,7 @@ export default function Home() {
         <MeetAttorneySection />
         <QuestionnaireSection />
         <CTASection />
+        <QuestionsBar />
       </main>
       <Footer />
     </>
