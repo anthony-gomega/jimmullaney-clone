@@ -1,6 +1,5 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import GetHelpBar from "./GetHelpBar";
 import PageHero from "./PageHero";
 import PracticeAreasSidebar from "./PracticeAreasSidebar";
 
@@ -33,7 +32,6 @@ export default function InnerPage({
           </div>
         </div>
       </main>
-      <GetHelpBar />
       <Footer />
     </>
   );

@@ -1,66 +1,274 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+
+type MenuItem = {
+  label: string;
+  href: string;
+  children?: MenuItem[];
+};
+
+const navigation: MenuItem[] = [
+  { label: "Home", href: "/" },
+  {
+    label: "About",
+    href: "/about",
+    children: [
+      { label: "A. James Mullaney", href: "/attorney/mullaney-a-james" },
+      { label: "ShareFile Portal", href: "https://jimmullaney.sharefile.com/" },
+      { label: "Blog", href: "/blog" },
+    ],
+  },
+  {
+    label: "Family Law",
+    href: "/family-law",
+    children: [
+      {
+        label: "Divorce",
+        href: "/divorce",
+        children: [
+          { label: "Collaborative Divorce", href: "/divorce/collaborative-divorce" },
+          { label: "Alimony", href: "/divorce/alimony" },
+          { label: "Military Issues", href: "/divorce/military-issues" },
+          { label: "Contested Divorce", href: "/divorce/contested-divorce" },
+          { label: "Uncontested Divorce", href: "/divorce/uncontested-divorce-in-jacksonville-fl" },
+          { label: "Divorce Mediation", href: "/divorce/divorce-mediation-in-jacksonville" },
+          { label: "Annulment", href: "/annulment-lawyer-in-jacksonville" },
+          { label: "Equitable Distribution", href: "/divorce/equitable-distribution" },
+        ],
+      },
+      { label: "Parenting Plans", href: "/time-sharing-and-visitation-in-florida" },
+      { label: "Paternity", href: "/paternity" },
+      { label: "Child Support", href: "/divorce/child-support" },
+      { label: "Prenuptial Agreements", href: "/prenuptial-agreements" },
+      { label: "Contempt", href: "/contempt" },
+      { label: "Modifications", href: "/modifications" },
+      { label: "Domestic Violence", href: "/domestic-violence" },
+    ],
+  },
+  { label: "Florida Child Support Calculator", href: "/florida-child-support-calculator" },
+  { label: "Video FAQ", href: "/videos" },
+  { label: "Portal", href: "https://jimmullaney.sharefile.com/" },
+  { label: "Contact", href: "/contact" },
+];
+
+function NavItem({ item }: { item: MenuItem }) {
+  const [open, setOpen] = useState(false);
+  const hasChildren = !!item.children?.length;
+
+  return (
+    <li
+      className="relative group"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <Link
+        href={item.href}
+        className="flex items-center gap-1 px-3 py-6 text-[14px] font-semibold uppercase tracking-wide text-[#03254B] hover:text-[#C93523] transition-colors whitespace-nowrap"
+        style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+      >
+        {item.label}
+        {hasChildren && (
+          <svg
+            className="w-3 h-3"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fillRule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 11.06l3.71-3.83a.75.75 0 111.08 1.04l-4.25 4.39a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+              clipRule="evenodd"
+            />
+          </svg>
+        )}
+      </Link>
+      {hasChildren && open && (
+        <ul
+          className="absolute left-0 top-full bg-[#03254B] min-w-[260px] shadow-xl z-50"
+          style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+        >
+          {item.children!.map((child) => (
+            <SubNavItem key={child.label} item={child} />
+          ))}
+        </ul>
+      )}
+    </li>
+  );
+}
+
+function SubNavItem({ item }: { item: MenuItem }) {
+  const [open, setOpen] = useState(false);
+  const hasChildren = !!item.children?.length;
+
+  return (
+    <li
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <Link
+        href={item.href}
+        className="flex items-center justify-between px-4 py-3 text-[13px] text-white hover:bg-[#C93523] transition-colors border-b border-white/10 last:border-b-0"
+      >
+        <span>{item.label}</span>
+        {hasChildren && (
+          <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              fillRule="evenodd"
+              d="M7.21 14.77a.75.75 0 01.02-1.06L11.06 10 7.23 6.29a.75.75 0 111.04-1.08l4.39 4.25a.75.75 0 010 1.08l-4.39 4.25a.75.75 0 01-1.06-.02z"
+              clipRule="evenodd"
+            />
+          </svg>
+        )}
+      </Link>
+      {hasChildren && open && (
+        <ul className="absolute left-full top-0 bg-[#03254B] min-w-[260px] shadow-xl">
+          {item.children!.map((child) => (
+            <li key={child.label}>
+              <Link
+                href={child.href}
+                className="block px-4 py-3 text-[13px] text-white hover:bg-[#C93523] transition-colors border-b border-white/10 last:border-b-0"
+              >
+                {child.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
+    </li>
+  );
+}
 
 export default function Header() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   return (
-    <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
-      <div className="max-w-[1200px] mx-auto flex items-center justify-between px-6 py-3">
-        <Link href="/">
+    <header className="bg-white sticky top-0 z-50 shadow-sm">
+      {/* Top bar with tagline */}
+      <div className="bg-[#03254B] text-white text-[12px] uppercase tracking-wider">
+        <div className="max-w-[1280px] mx-auto px-6 py-2 flex items-center justify-between">
+          <span style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}>
+            Experienced. Personable. Effective.
+          </span>
+          <div className="hidden md:flex items-center gap-4">
+            <span>Jacksonville, FL</span>
+            <span>|</span>
+            <span>Serving Florida &amp; Georgia</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Main header */}
+      <div className="max-w-[1280px] mx-auto flex items-center justify-between px-6 py-4">
+        <Link href="/" className="flex-shrink-0">
           <Image
             src="/images/logo.jpg"
             alt="Law Office of A. James Mullaney"
-            width={250}
-            height={66}
+            width={320}
+            height={85}
             priority
+            className="h-[72px] w-auto"
           />
         </Link>
 
-        <nav
-          className="hidden lg:flex items-center gap-8 text-[14px] font-semibold uppercase tracking-wide text-[#03254B]"
-          style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
-        >
-          <Link href="/" className="hover:text-[#C93523] transition-colors">
-            Home
-          </Link>
-          <Link href="/about" className="hover:text-[#C93523] transition-colors">
-            About
-          </Link>
-          <Link href="/divorce" className="hover:text-[#C93523] transition-colors">
-            Divorce
-          </Link>
-          <Link
-            href="/time-sharing-and-visitation-in-florida"
-            className="hover:text-[#C93523] transition-colors"
-          >
-            Parenting Plans
-          </Link>
-          <Link href="/paternity" className="hover:text-[#C93523] transition-colors">
-            Paternity
-          </Link>
-          <Link href="/blog" className="hover:text-[#C93523] transition-colors">
-            Blog
-          </Link>
-          <Link href="/contact" className="hover:text-[#C93523] transition-colors">
-            Contact
-          </Link>
-        </nav>
+        <div className="flex items-center gap-4">
+          <div className="text-right hidden lg:block">
+            <p
+              className="text-[11px] uppercase tracking-wider text-gray-500 mb-1"
+              style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+            >
+              Call For A Consultation
+            </p>
+            <a
+              href="tel:+1-904-364-4565"
+              className="inline-flex items-center gap-2 bg-[#C93523] hover:bg-[#a82b1c] text-white font-bold text-[16px] px-5 py-2 transition-colors"
+              style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+              904-364-4565
+            </a>
+          </div>
 
-        <a
-          href="tel:+1-904-364-4565"
-          className="hidden lg:flex items-center gap-2 text-[#03254B] font-bold text-[15px]"
-          style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-4 w-4"
-            viewBox="0 0 20 20"
-            fill="currentColor"
+          <button
+            className="lg:hidden p-2"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
           >
-            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-          </svg>
-          Call Now: 904-364-4565
-        </a>
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
+
+      {/* Navigation bar */}
+      <nav className="border-t border-gray-100 bg-white hidden lg:block">
+        <div className="max-w-[1280px] mx-auto px-6">
+          <ul className="flex items-center justify-center">
+            {navigation.map((item) => (
+              <NavItem key={item.label} item={item} />
+            ))}
+          </ul>
+        </div>
+      </nav>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <nav className="lg:hidden bg-white border-t border-gray-200">
+          <ul>
+            {navigation.map((item) => (
+              <li key={item.label} className="border-b border-gray-100">
+                <Link
+                  href={item.href}
+                  className="block px-6 py-3 text-[14px] font-semibold uppercase text-[#03254B]"
+                  style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {item.label}
+                </Link>
+                {item.children && (
+                  <ul className="bg-gray-50 pl-4">
+                    {item.children.map((child) => (
+                      <li key={child.label}>
+                        <Link
+                          href={child.href}
+                          className="block px-6 py-2 text-[13px] text-[#03254B]"
+                          onClick={() => setMobileOpen(false)}
+                        >
+                          {child.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+            <li className="px-6 py-4 bg-gray-50">
+              <a
+                href="tel:+1-904-364-4565"
+                className="block text-center bg-[#C93523] text-white font-bold px-5 py-3"
+                style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+              >
+                Call 904-364-4565
+              </a>
+            </li>
+          </ul>
+        </nav>
+      )}
     </header>
   );
 }
