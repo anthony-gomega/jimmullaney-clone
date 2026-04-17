@@ -66,7 +66,7 @@ function NavItem({ item }: { item: MenuItem }) {
     >
       <Link
         href={item.href}
-        className="flex items-center gap-1 px-3 py-4 text-[13px] font-semibold uppercase tracking-wide text-[#03254B] hover:text-[#C93523] transition-colors whitespace-nowrap"
+        className="flex items-center gap-1 px-3 py-3 text-[13px] font-semibold uppercase tracking-wide text-[#03254B] hover:text-[#C93523] transition-colors whitespace-nowrap"
         style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
       >
         {item.label}
@@ -147,15 +147,15 @@ export default function Header() {
   return (
     <header className="bg-white sticky top-0 z-50 shadow-sm">
       {/* Main header: logo + nav + phone on one row */}
-      <div className="max-w-[1280px] mx-auto flex items-center justify-between px-6 py-3 gap-6">
+      <div className="max-w-[1400px] mx-auto flex items-center justify-between px-6 py-5 gap-4">
         <Link href="/" className="flex-shrink-0">
           <Image
             src="/images/logo.jpg"
             alt="Law Office of A. James Mullaney"
-            width={280}
-            height={74}
+            width={320}
+            height={84}
             priority
-            className="h-[60px] w-auto"
+            className="h-[80px] w-auto"
           />
         </Link>
 
@@ -170,12 +170,12 @@ export default function Header() {
         <div className="flex items-center gap-3 flex-shrink-0">
           <a
             href="tel:+1-904-364-4565"
-            className="hidden lg:inline-flex items-center gap-2 bg-[#C93523] hover:bg-[#a82b1c] text-white font-bold text-[15px] px-5 py-3 transition-colors"
+            className="hidden lg:inline-flex items-center gap-2 bg-[#C93523] hover:bg-[#a82b1c] text-white font-bold text-[17px] px-7 py-4 transition-colors"
             style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
+              className="h-5 w-5"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
