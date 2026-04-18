@@ -2,6 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Testimonials from "./components/Testimonials";
+import Reveal from "./components/Reveal";
+import {
+  DivorceIcon,
+  ChildSupportIcon,
+  PaternityIcon,
+  ParentingPlanIcon,
+  PrenupIcon,
+  ModificationsIcon,
+  MediationIcon,
+  UncontestedDivorceIcon,
+} from "./components/PracticeIcons";
 
 /* ─── Hero Section ─── */
 function Hero() {
@@ -15,18 +27,16 @@ function Hero() {
         paddingBottom: 120,
       }}
     >
-      {/* Background image, slightly rotated to level the tilted skyline and scaled to hide empty corners */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: 'url("/images/jacksonville-hero.jpg")',
-          backgroundSize: "cover",
-          backgroundPosition: "center 40%",
-          transform: "rotate(-0.7deg) scale(1.08)",
-          transformOrigin: "center center",
-          filter: "brightness(1.05) contrast(1.02)",
-        }}
+      {/* Sharp background image — no rotation/scale so we keep the original pixel fidelity */}
+      <Image
+        src="/images/jacksonville-hero.jpg"
+        alt=""
+        fill
+        priority
+        quality={95}
+        sizes="100vw"
+        className="object-cover object-center z-0"
+        style={{ imageRendering: "crisp-edges" }}
       />
       {/* Gradient overlay — lighter on the right so the skyline stays visible */}
       <div
@@ -34,14 +44,14 @@ function Hero() {
         className="absolute inset-0 z-0"
         style={{
           background:
-            "linear-gradient(90deg, rgba(14, 26, 63, 0.82) 0%, rgba(14, 26, 63, 0.5) 45%, rgba(14, 26, 63, 0.15) 100%)",
+            "linear-gradient(90deg, rgba(14, 26, 63, 0.78) 0%, rgba(14, 26, 63, 0.42) 50%, rgba(14, 26, 63, 0.1) 100%)",
         }}
       />
       <div className="relative z-10 w-full">
       <div className="max-w-[1280px] mx-auto px-6 w-full">
         <div className="max-w-[640px]">
           <p
-            className="text-[#8B2635] text-[14px] font-semibold uppercase tracking-[2px] mb-4"
+            className="text-[#E0B158] text-[14px] font-semibold uppercase tracking-[3px] mb-5"
             style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
           >
             Experienced. Personable. Effective.
@@ -151,13 +161,7 @@ function FeaturedServices() {
             className="group bg-white border border-[#03254B]/10 hover:border-[#8B2635] hover:shadow-xl transition-all p-10 flex flex-col"
           >
             <div className="flex items-center justify-end mb-6">
-              <Image
-                src="/images/un-divorce-icon.webp"
-                alt=""
-                width={56}
-                height={56}
-                style={{ filter: "brightness(0) saturate(100%) invert(12%) sepia(40%) saturate(3800%) hue-rotate(215deg) brightness(80%) contrast(100%)" }}
-              />
+              <UncontestedDivorceIcon className="w-14 h-14 text-[#8B2635]" />
             </div>
             <h3
               className="text-[#03254B] text-[32px] leading-[1.15] mb-4"
@@ -188,13 +192,7 @@ function FeaturedServices() {
             className="group bg-white border border-[#03254B]/10 hover:border-[#8B2635] hover:shadow-xl transition-all p-10 flex flex-col"
           >
             <div className="flex items-center justify-end mb-6">
-              <Image
-                src="/images/mediation-icon.webp"
-                alt=""
-                width={56}
-                height={56}
-                style={{ filter: "brightness(0) saturate(100%) invert(12%) sepia(40%) saturate(3800%) hue-rotate(215deg) brightness(80%) contrast(100%)" }}
-              />
+              <MediationIcon className="w-14 h-14 text-[#8B2635]" />
             </div>
             <h3
               className="text-[#03254B] text-[32px] leading-[1.15] mb-4"
@@ -225,34 +223,26 @@ function FeaturedServices() {
   );
 }
 
-/* ─── Practice Areas (diamond layout) ─── */
-function PracticeAreaIcon({
-  icon,
+/* ─── Practice Areas ─── */
+function PracticeAreaTile({
+  Icon,
   label,
   href,
 }: {
-  icon: string;
+  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   label: string;
   href: string;
 }) {
   return (
     <Link
       href={href}
-      className="group flex flex-col items-center text-center w-[200px]"
+      className="group flex flex-col items-center text-center p-6 bg-white border border-[#03254B]/10 hover:border-[#8B2635] hover:shadow-lg transition-all"
     >
-      <Image
-        src={icon}
-        alt={label}
-        width={96}
-        height={96}
-        className="mb-4 transition-transform group-hover:-translate-y-1"
-        style={{
-          filter:
-            "brightness(0) saturate(100%) invert(11%) sepia(40%) saturate(3500%) hue-rotate(215deg) brightness(80%) contrast(100%)",
-        }}
-      />
+      <div className="w-20 h-20 flex items-center justify-center rounded-full bg-[#FAF7F2] group-hover:bg-[#8B2635] transition-colors mb-5">
+        <Icon className="w-10 h-10 text-[#8B2635] group-hover:text-white transition-colors" />
+      </div>
       <span
-        className="text-[#03254B] text-[15px] font-medium leading-[1.4] group-hover:text-[#8B2635] transition-colors"
+        className="text-[#03254B] text-[15px] font-semibold leading-[1.3] group-hover:text-[#8B2635] transition-colors"
         style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
       >
         {label}
@@ -284,37 +274,13 @@ function PracticeAreas() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-12 max-w-[900px] mx-auto">
-          <PracticeAreaIcon
-            icon="/images/divorce-icon.webp"
-            label="Divorce & Separation"
-            href="/divorce"
-          />
-          <PracticeAreaIcon
-            icon="/images/child-icon.webp"
-            label="Child Support"
-            href="/divorce/child-support"
-          />
-          <PracticeAreaIcon
-            icon="/images/paternity-icon.webp"
-            label="Paternity"
-            href="/paternity"
-          />
-          <PracticeAreaIcon
-            icon="/images/parent-icon.webp"
-            label="Parenting Plans"
-            href="/time-sharing-and-visitation-in-florida"
-          />
-          <PracticeAreaIcon
-            icon="/images/un-divorce-icon.webp"
-            label="Prenuptial Agreements"
-            href="/prenuptial-agreements"
-          />
-          <PracticeAreaIcon
-            icon="/images/mediation-icon.webp"
-            label="Modifications"
-            href="/modifications"
-          />
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-[1000px] mx-auto">
+          <PracticeAreaTile Icon={DivorceIcon} label="Divorce & Separation" href="/divorce" />
+          <PracticeAreaTile Icon={ChildSupportIcon} label="Child Support" href="/divorce/child-support" />
+          <PracticeAreaTile Icon={PaternityIcon} label="Paternity" href="/paternity" />
+          <PracticeAreaTile Icon={ParentingPlanIcon} label="Parenting Plans" href="/time-sharing-and-visitation-in-florida" />
+          <PracticeAreaTile Icon={PrenupIcon} label="Prenuptial Agreements" href="/prenuptial-agreements" />
+          <PracticeAreaTile Icon={ModificationsIcon} label="Modifications" href="/modifications" />
         </div>
       </div>
     </section>
@@ -595,105 +561,6 @@ function CTASection() {
   );
 }
 
-/* ─── Testimonials (real Google reviews) ─── */
-function Testimonials() {
-  // Real reviews pulled from the firm's public Google Business Profile.
-  // Short excerpts only, with attribution. Link out for full reviews.
-  const reviews = [
-    {
-      name: "Catherine H.",
-      date: "Apr 2025",
-      quote: "Jim was very professional and always available to answer my questions.",
-    },
-    {
-      name: "Vinny G.",
-      date: "Jul 2025",
-      quote: "Knowledgeable about everything and made my case a breeze.",
-    },
-    {
-      name: "Madison C.",
-      date: "May 2025",
-      quote: "Best lawyer I’ve ever worked with.",
-    },
-    {
-      name: "Beau B.",
-      date: "May 2025",
-      quote: "Answered my call same day. Extremely professional and always friendly.",
-    },
-  ];
-
-  const stars = (n = 5) => (
-    <div className="flex gap-0.5">
-      {Array.from({ length: n }).map((_, i) => (
-        <svg key={i} className="w-4 h-4 text-[#E0B158]" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.286 3.957c.3.921-.755 1.688-1.54 1.118l-3.37-2.448a1 1 0 00-1.175 0l-3.37 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.05 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z" />
-        </svg>
-      ))}
-    </div>
-  );
-
-  return (
-    <section className="bg-white py-24">
-      <div className="max-w-[1280px] mx-auto px-6">
-        <div className="text-center mb-14 max-w-[720px] mx-auto">
-          <p
-            className="text-[#8B2635] text-[13px] font-semibold uppercase tracking-[3px] mb-3"
-            style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
-          >
-            What Clients Say
-          </p>
-          <h2
-            className="text-[#03254B] text-[40px] leading-[1.15] mb-6"
-            style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontWeight: 400 }}
-          >
-            Rated <em className="italic">4.9</em> across 108 Google reviews
-          </h2>
-          <div className="flex items-center justify-center gap-3">
-            {stars(5)}
-            <a
-              href="https://www.google.com/search?q=Law+Office+of+A.+James+Mullaney+Jacksonville+reviews"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#03254B]/70 hover:text-[#8B2635] text-[14px] underline"
-            >
-              See all reviews on Google
-            </a>
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {reviews.map((r) => (
-            <figure
-              key={r.name}
-              className="bg-[#FAF7F2] p-7 flex flex-col border border-[#03254B]/5"
-            >
-              {stars(5)}
-              <blockquote
-                className="text-[#03254B] text-[17px] leading-[1.55] my-5 flex-1 italic"
-                style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
-              >
-                &ldquo;{r.quote}&rdquo;
-              </blockquote>
-              <figcaption className="text-[13px]">
-                <div className="text-[#03254B] font-semibold">{r.name}</div>
-                <div className="text-[#03254B]/55 flex items-center gap-1.5 mt-0.5">
-                  <span>Google review</span>
-                  <span aria-hidden="true">·</span>
-                  <span>{r.date}</span>
-                </div>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-
-        <p className="text-center text-[#03254B]/60 text-[12px] mt-8 italic">
-          Reviews shown are excerpts from public Google Business Profile reviews.
-        </p>
-      </div>
-    </section>
-  );
-}
-
 /* ─── "If You Have Questions" red bar ─── */
 function QuestionsBar() {
   return (
@@ -718,14 +585,14 @@ export default function Home() {
       <main>
         <Hero />
         <StatsBand />
-        <FeaturedServices />
-        <PracticeAreas />
-        <SupportSection />
-        <EducationSection />
-        <MeetAttorneySection />
-        <Testimonials />
-        <QuestionnaireSection />
-        <CTASection />
+        <Reveal><FeaturedServices /></Reveal>
+        <Reveal><PracticeAreas /></Reveal>
+        <Reveal><SupportSection /></Reveal>
+        <Reveal><EducationSection /></Reveal>
+        <Reveal><MeetAttorneySection /></Reveal>
+        <Reveal><Testimonials /></Reveal>
+        <Reveal><QuestionnaireSection /></Reveal>
+        <Reveal><CTASection /></Reveal>
         <QuestionsBar />
       </main>
       <Footer />

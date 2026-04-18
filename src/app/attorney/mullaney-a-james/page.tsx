@@ -26,7 +26,7 @@ export default function AttorneyPage() {
         title="A. James Mullaney"
         breadcrumbs={[{ label: "Attorney" }]}
       >
-        <div className="flex flex-col md:flex-row gap-8 items-start">
+        <div className="flex flex-col md:flex-row gap-10 items-center">
           <Image
             src="/images/mullaney-portrait.png"
             alt="A. James Mullaney, Jacksonville Family Law Attorney"
