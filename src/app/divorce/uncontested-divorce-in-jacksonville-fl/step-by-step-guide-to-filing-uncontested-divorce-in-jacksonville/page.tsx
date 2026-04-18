@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Step-By-Step Guide To Filing Uncontested Divorce | Jacksonville FL",
   description:
     "If you are ready to file for an uncontested divorce, having legal representation can simplify the process and prevent mistakes.",
+  alternates: { canonical: "/divorce/uncontested-divorce-in-jacksonville-fl/step-by-step-guide-to-filing-uncontested-divorce-in-jacksonville" }
 };
 
 export default function Page() {

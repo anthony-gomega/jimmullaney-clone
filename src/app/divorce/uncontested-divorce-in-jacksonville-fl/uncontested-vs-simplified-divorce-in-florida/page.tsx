@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Uncontested vs. Simplified Divorce in Florida | Jacksonville",
   description:
     "Florida offers two streamlined divorce options for couples who agree on all terms: simplified dissolution and uncontested divorce.",
+  alternates: { canonical: "/divorce/uncontested-divorce-in-jacksonville-fl/uncontested-vs-simplified-divorce-in-florida" }
 };
 
 export default function Page() {

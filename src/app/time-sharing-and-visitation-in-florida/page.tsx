@@ -3,9 +3,11 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Big Changes To Time Sharing And Visitation In Florida",
+  title:
+    "Jacksonville Parenting Plans & Time-Sharing Attorney | Florida Family Law",
   description:
-    "I am an experienced Jacksonville parenting plan lawyer offering guidance on parenting plans, time-sharing and parenting solutions.",
+    "Jacksonville parenting plan and time-sharing attorney. Get clear guidance on Florida's 50/50 time-sharing presumption, custody factors, and enforceable parenting plans.",
+  alternates: { canonical: "/time-sharing-and-visitation-in-florida" },
 };
 
 export default function ParentingPlansPage() {

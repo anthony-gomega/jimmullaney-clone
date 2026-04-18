@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Jacksonville Parental Relocation Lawyer | Law Office of A. James Mullaney",
   description:
     "24+ years of experience helping Jacksonville parents with parental relocation petitions and objections under Florida Statutes §61.13001.",
+  alternates: { canonical: "/time-sharing-and-visitation-in-florida/relocations" }
 };
 
 export default function Page() {

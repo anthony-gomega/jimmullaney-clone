@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Online Uncontested Divorce vs. Attorney-Assisted: Pros and Cons",
   description:
     "Online divorce services are cheaper, but an attorney-assisted uncontested divorce provides protection, accuracy, and peace of mind.",
+  alternates: { canonical: "/divorce/uncontested-divorce-in-jacksonville-fl/online-uncontested-divorce-vs-attorney-assisted-pros-and-cons" }
 };
 
 export default function Page() {

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Jacksonville Domestic Violence Lawyer | Law Office of A. James Mullaney",
   description:
     "At the Law Office of A. James Mullaney, I can represent you. Call 904-364-4565 for a completely confidential consultation.",
+  alternates: { canonical: "/domestic-violence" }
 };
 
 export default function DomesticViolencePage() {

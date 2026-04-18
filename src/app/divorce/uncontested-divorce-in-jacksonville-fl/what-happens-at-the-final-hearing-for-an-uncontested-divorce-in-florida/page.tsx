@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "What Happens at the Final Hearing for an Uncontested Divorce",
   description:
     "Learn what questions the judge asks, what documents to bring, and how to prepare for your uncontested divorce final hearing in Florida.",
+  alternates: { canonical: "/divorce/uncontested-divorce-in-jacksonville-fl/what-happens-at-the-final-hearing-for-an-uncontested-divorce-in-florida" }
 };
 
 export default function Page() {

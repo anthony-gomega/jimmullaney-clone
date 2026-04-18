@@ -2,8 +2,10 @@ import InnerPage from "../components/InnerPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact | Law Office of A. James Mullaney",
-  description: "Contact the Law Office of A. James Mullaney at 904-364-4565 to schedule a consultation.",
+  title: "Contact a Jacksonville Family Law Attorney | Schedule a Consultation",
+  description:
+    "Contact the Law Office of A. James Mullaney in Jacksonville, FL. Call 904-364-4565 or message us to schedule a confidential family-law consultation with Jim directly.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

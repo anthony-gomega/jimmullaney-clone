@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Law Office of A. James Mullaney",
   description:
     "At the Law Office of A. James Mullaney, we are committed to protecting your privacy.",
+  alternates: { canonical: "/privacy" }
 };
 
 export default function PrivacyPage() {

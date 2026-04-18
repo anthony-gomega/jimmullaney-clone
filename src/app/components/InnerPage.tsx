@@ -2,6 +2,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import PageHero from "./PageHero";
 import PracticeAreasSidebar from "./PracticeAreasSidebar";
+import { JsonLd, breadcrumbSchema } from "./StructuredData";
 
 interface InnerPageProps {
   title: string;
@@ -18,6 +19,9 @@ export default function InnerPage({
 }: InnerPageProps) {
   return (
     <>
+      {breadcrumbs.length > 0 && (
+        <JsonLd data={breadcrumbSchema(breadcrumbs)} />
+      )}
       <Header />
       <PageHero title={title} breadcrumbs={breadcrumbs} />
       <main className="bg-white py-16">

@@ -4,9 +4,10 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Jacksonville Family Law Firm | Law Office of A. James Mullaney",
+  title: "About a Jacksonville Family Law Attorney & Florida Certified Mediator",
   description:
-    "I work with clients to resolve family law issues efficiently and inexpensively. Divorce, custody, child support and more - call today.",
+    "Meet A. James Mullaney, a Jacksonville family-law attorney and Florida Supreme Court–certified mediator with 25+ years of exclusive family-law practice in FL and GA.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

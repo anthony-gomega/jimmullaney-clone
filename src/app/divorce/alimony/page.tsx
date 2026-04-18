@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Jacksonville Alimony Lawyer | Law Office of A. James Mullaney",
   description:
     "I have over 24 years of experience as an alimony lawyer in Jacksonville. Contact me if you need help with any alimony or family law issue.",
+  alternates: { canonical: "/divorce/alimony" }
 };
 
 export default function AlimonyPage() {

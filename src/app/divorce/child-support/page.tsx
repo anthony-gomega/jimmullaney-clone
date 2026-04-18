@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Jacksonville Child Support Lawyer | Law Office of A. James Mullaney",
   description:
     "Consult with a child support lawyer in Jacksonville to ensure that the child support calculations in your case are performed properly.",
+  alternates: { canonical: "/divorce/child-support" }
 };
 
 export default function ChildSupportPage() {

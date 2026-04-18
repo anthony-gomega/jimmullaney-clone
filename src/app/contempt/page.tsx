@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Jacksonville Contempt Attorney | The Law Office of A. James Mullaney",
   description:
     "Is another person refusing to comply with a court order? I am a Jacksonville contempt lawyer who can help.",
+  alternates: { canonical: "/contempt" }
 };
 
 export default function ContemptPage() {

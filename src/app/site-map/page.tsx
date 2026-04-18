@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Site Map | Law Office of A. James Mullaney",
   description: "Site map for the Law Office of A. James Mullaney.",
+  alternates: { canonical: "/site-map" }
 };
 
 const sections = [

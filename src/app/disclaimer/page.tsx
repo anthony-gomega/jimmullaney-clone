@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Disclaimer - Law Office of A. James Mullaney",
   description: "Website disclaimer for the Law Office of A. James Mullaney.",
+  alternates: { canonical: "/disclaimer" }
 };
 
 export default function DisclaimerPage() {

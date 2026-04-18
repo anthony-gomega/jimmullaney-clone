@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Jacksonville Divorce Law Office",
   description:
     "Law Office of A. James Mullaney, 8777 San Jose Blvd. Ste. 302, Jacksonville, FL 32217. Telephone: 904-364-4565.",
+  alternates: { canonical: "/jacksonville-divorce-law-office" }
 };
 
 export default function OfficePage() {

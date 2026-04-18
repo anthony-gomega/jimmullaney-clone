@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "FAQ Videos | Law Office of A. James Mullaney",
   description:
     "Answers to common questions about divorce, child support, parenting time and paternity in easy to digest video format.",
+  alternates: { canonical: "/videos" }
 };
 
 const videos = [

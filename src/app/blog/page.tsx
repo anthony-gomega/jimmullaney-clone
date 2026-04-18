@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Blog | Jacksonville - Law Office of A. James Mullaney",
   description:
     "Family law blog from the Law Office of A. James Mullaney in Jacksonville, FL.",
+  alternates: { canonical: "/blog" }
 };
 
 const posts = [

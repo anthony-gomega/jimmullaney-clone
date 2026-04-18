@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Jacksonville Contested Divorce Lawyer",
   description:
     "Let me handle your contested divorce at the Law Office of A. James Mullaney in Jacksonville. I have 24-plus years of experience.",
+  alternates: { canonical: "/divorce/contested-divorce" }
 };
 
 export default function ContestedDivorcePage() {

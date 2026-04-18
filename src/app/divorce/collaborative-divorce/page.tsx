@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Jacksonville Collaborative Divorce Lawyer",
   description:
     "An experienced yet compassionate Jacksonville collaborative divorce lawyer like me can help you use collaborative law to make your divorce easier.",
+  alternates: { canonical: "/divorce/collaborative-divorce" }
 };
 
 export default function CollaborativeDivorcePage() {

@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Jacksonville Prenuptial Agreement Lawyer | The Law Office of A. James Mullaney",
   description: "Preparing you for the future with prenuptial agreements.",
+  alternates: { canonical: "/prenuptial-agreements" }
 };
 
 export default function PrenupPage() {

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
+import { JsonLd, legalServiceSchema } from "./components/StructuredData";
 import "./globals.css";
 
 const inter = Inter({
@@ -13,19 +14,48 @@ const fraunces = Fraunces({
   style: ["normal", "italic"],
 });
 
+const BASE_URL = "https://jimmullaney-clone.vercel.app";
+
 export const metadata: Metadata = {
-  title: "Law Office of A. James Mullaney | Jacksonville Divorce And Family Law Attorney",
+  metadataBase: new URL(BASE_URL),
+  title: {
+    default:
+      "Jacksonville Divorce & Family Law Attorney | Law Office of A. James Mullaney",
+    template: "%s | Law Office of A. James Mullaney",
+  },
   description:
-    "If you need family law services, call a Jacksonville attorney and certified family court mediator with a quarter century of experience. Contact the Law Office of A. James Mullaney at 904-364-4565.",
+    "Jacksonville family-law attorney and Florida Supreme Court–certified mediator with 25+ years of experience in uncontested divorce, mediation, and parenting plans. Call 904-364-4565.",
+  applicationName: "Law Office of A. James Mullaney",
+  authors: [{ name: "A. James Mullaney" }],
+  keywords: [
+    "Jacksonville family law attorney",
+    "Jacksonville divorce lawyer",
+    "uncontested divorce Jacksonville",
+    "Florida family court mediator",
+    "Jacksonville child support lawyer",
+    "Florida parenting plan attorney",
+  ],
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Law Office of A. James Mullaney | Jacksonville Divorce And Family Law Attorney",
+    title:
+      "Jacksonville Divorce & Family Law Attorney | Law Office of A. James Mullaney",
     description:
-      "If you need family law services, call a Jacksonville attorney and certified family court mediator with a quarter century of experience. Contact the Law Office of A. James Mullaney at 904-364-4565.",
-    url: "https://www.jimmullaney.com/",
+      "Jacksonville family-law attorney and certified mediator with 25+ years of experience. Focused on uncontested divorce and mediation.",
+    url: BASE_URL,
     siteName: "Law Office of A. James Mullaney",
     locale: "en_US",
     type: "website",
+    images: [{ url: "/images/jacksonville-hero.jpg" }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Jacksonville Divorce & Family Law Attorney | Law Office of A. James Mullaney",
+    description:
+      "Jacksonville family-law attorney and certified mediator with 25+ years of experience.",
+    images: ["/images/jacksonville-hero.jpg"],
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
@@ -35,6 +65,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
+      <head>
+        <JsonLd data={legalServiceSchema} />
+      </head>
       <body
         className="min-h-screen"
         style={{ fontFamily: "var(--font-inter), Helvetica, Arial, sans-serif" }}

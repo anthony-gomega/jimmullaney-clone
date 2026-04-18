@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Jacksonville Equitable Distribution Attorney",
   description:
     "At the Law Office of A. James Mullaney in Jacksonville, I have 24-plus years of experience handling equitable distribution of assets or debts.",
+  alternates: { canonical: "/divorce/equitable-distribution" }
 };
 
 export default function EquitableDistributionPage() {

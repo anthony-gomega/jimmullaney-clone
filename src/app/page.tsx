@@ -50,9 +50,9 @@ function Hero() {
             className="text-white text-[42px] lg:text-[56px] leading-[1.05] uppercase mb-6"
             style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
           >
-            <span className="font-normal">An Experienced</span>
-            <span className="block font-bold">Family Law Attorney</span>
-            <span className="block font-normal">And Mediator</span>
+            <span className="font-normal">Jacksonville</span>
+            <span className="block font-bold">Divorce &amp; Family Law</span>
+            <span className="block font-normal">Attorney &amp; Mediator</span>
           </h1>
           <p className="text-white/90 text-[17px] leading-[1.7] mb-8 max-w-[560px]">
             Education, collaboration and efficiency are the cornerstones of my
@@ -595,6 +595,105 @@ function CTASection() {
   );
 }
 
+/* ─── Testimonials (real Google reviews) ─── */
+function Testimonials() {
+  // Real reviews pulled from the firm's public Google Business Profile.
+  // Short excerpts only, with attribution. Link out for full reviews.
+  const reviews = [
+    {
+      name: "Catherine H.",
+      date: "Apr 2025",
+      quote: "Jim was very professional and always available to answer my questions.",
+    },
+    {
+      name: "Vinny G.",
+      date: "Jul 2025",
+      quote: "Knowledgeable about everything and made my case a breeze.",
+    },
+    {
+      name: "Madison C.",
+      date: "May 2025",
+      quote: "Best lawyer I’ve ever worked with.",
+    },
+    {
+      name: "Beau B.",
+      date: "May 2025",
+      quote: "Answered my call same day. Extremely professional and always friendly.",
+    },
+  ];
+
+  const stars = (n = 5) => (
+    <div className="flex gap-0.5">
+      {Array.from({ length: n }).map((_, i) => (
+        <svg key={i} className="w-4 h-4 text-[#E0B158]" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.286 3.957c.3.921-.755 1.688-1.54 1.118l-3.37-2.448a1 1 0 00-1.175 0l-3.37 2.448c-.784.57-1.838-.197-1.539-1.118l1.286-3.957a1 1 0 00-.364-1.118L2.05 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z" />
+        </svg>
+      ))}
+    </div>
+  );
+
+  return (
+    <section className="bg-white py-24">
+      <div className="max-w-[1280px] mx-auto px-6">
+        <div className="text-center mb-14 max-w-[720px] mx-auto">
+          <p
+            className="text-[#8B2635] text-[13px] font-semibold uppercase tracking-[3px] mb-3"
+            style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
+          >
+            What Clients Say
+          </p>
+          <h2
+            className="text-[#03254B] text-[40px] leading-[1.15] mb-6"
+            style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontWeight: 400 }}
+          >
+            Rated <em className="italic">4.9</em> across 108 Google reviews
+          </h2>
+          <div className="flex items-center justify-center gap-3">
+            {stars(5)}
+            <a
+              href="https://www.google.com/search?q=Law+Office+of+A.+James+Mullaney+Jacksonville+reviews"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#03254B]/70 hover:text-[#8B2635] text-[14px] underline"
+            >
+              See all reviews on Google
+            </a>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {reviews.map((r) => (
+            <figure
+              key={r.name}
+              className="bg-[#FAF7F2] p-7 flex flex-col border border-[#03254B]/5"
+            >
+              {stars(5)}
+              <blockquote
+                className="text-[#03254B] text-[17px] leading-[1.55] my-5 flex-1 italic"
+                style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
+              >
+                &ldquo;{r.quote}&rdquo;
+              </blockquote>
+              <figcaption className="text-[13px]">
+                <div className="text-[#03254B] font-semibold">{r.name}</div>
+                <div className="text-[#03254B]/55 flex items-center gap-1.5 mt-0.5">
+                  <span>Google review</span>
+                  <span aria-hidden="true">·</span>
+                  <span>{r.date}</span>
+                </div>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+
+        <p className="text-center text-[#03254B]/60 text-[12px] mt-8 italic">
+          Reviews shown are excerpts from public Google Business Profile reviews.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 /* ─── "If You Have Questions" red bar ─── */
 function QuestionsBar() {
   return (
@@ -624,6 +723,7 @@ export default function Home() {
         <SupportSection />
         <EducationSection />
         <MeetAttorneySection />
+        <Testimonials />
         <QuestionnaireSection />
         <CTASection />
         <QuestionsBar />

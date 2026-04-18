@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Drafting Florida Marital Settlement Agreements | Jacksonville",
   description:
     "Need a marital settlement agreement in Jacksonville? Talk to a skilled Florida attorney with 24-plus years of drafting comprehensive divorce agreements.",
+  alternates: { canonical: "/divorce/uncontested-divorce-in-jacksonville-fl/florida-marital-settlement-agreements" }
 };
 
 export default function Page() {

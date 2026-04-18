@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Jacksonville Post-Decree Modifications Lawyer | The Law Office of A. James Mullaney",
   description:
     "If you need to modify a child support, alimony or time-sharing order, I can help.",
+  alternates: { canonical: "/modifications" }
 };
 
 export default function ModificationsPage() {

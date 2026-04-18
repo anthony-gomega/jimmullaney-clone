@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Jacksonville Military Divorce Lawyer | Law Office of A. James Mullaney",
   description:
     "Hire an experienced Jacksonville military divorce lawyer to help with benefits, asset division and more. I am here to help you with military divorce issues.",
+  alternates: { canonical: "/divorce/military-issues" }
 };
 
 export default function MilitaryDivorcePage() {

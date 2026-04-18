@@ -3,9 +3,10 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Jacksonville Paternity Lawyer | Law Office of A. James Mullaney",
+  title: "Jacksonville Paternity Lawyer | Florida Family Law Attorney",
   description:
-    "Do you need to establish paternity? You can turn to me, a caring Jacksonville paternity lawyer with over 24 years of experience serving Florida and Georgia.",
+    "Jacksonville paternity attorney with 25+ years of experience establishing paternity, parenting plans, and child support under Florida Statutes Chapter 742. Call 904-364-4565.",
+  alternates: { canonical: "/paternity" },
 };
 
 export default function PaternityPage() {
