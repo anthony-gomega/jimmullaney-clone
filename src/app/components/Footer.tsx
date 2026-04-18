@@ -29,18 +29,18 @@ export default function Footer() {
           <div>
             <h2
               className="text-white text-[36px] font-normal mb-2 uppercase"
-              style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+              style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
             >
               Get Help Now
             </h2>
-            <div className="w-16 h-[3px] bg-[#C93523] mb-6" />
+            <div className="w-16 h-[3px] bg-[#8B2635] mb-6" />
             <p className="text-white/80 text-[15px] mb-6">
               Fill out the form below to schedule a consultation. I respond
               quickly to every inquiry.
             </p>
 
             {submitted ? (
-              <div className="bg-[#C93523] p-6 text-white">
+              <div className="bg-[#8B2635] p-6 text-white">
                 <h3 className="text-xl font-semibold mb-2">Thank you!</h3>
                 <p>
                   Your message has been received. I will respond within one
@@ -55,14 +55,14 @@ export default function Footer() {
                     name="firstName"
                     placeholder="First Name *"
                     required
-                    className="w-full bg-transparent border border-white/40 p-3 text-white placeholder-white/60 focus:outline-none focus:border-[#C93523]"
+                    className="w-full bg-transparent border border-white/40 p-3 text-white placeholder-white/60 focus:outline-none focus:border-[#8B2635]"
                   />
                   <input
                     type="text"
                     name="lastName"
                     placeholder="Last Name *"
                     required
-                    className="w-full bg-transparent border border-white/40 p-3 text-white placeholder-white/60 focus:outline-none focus:border-[#C93523]"
+                    className="w-full bg-transparent border border-white/40 p-3 text-white placeholder-white/60 focus:outline-none focus:border-[#8B2635]"
                   />
                 </div>
                 <input
@@ -70,20 +70,20 @@ export default function Footer() {
                   name="email"
                   placeholder="Email *"
                   required
-                  className="w-full bg-transparent border border-white/40 p-3 text-white placeholder-white/60 focus:outline-none focus:border-[#C93523]"
+                  className="w-full bg-transparent border border-white/40 p-3 text-white placeholder-white/60 focus:outline-none focus:border-[#8B2635]"
                 />
                 <input
                   type="tel"
                   name="phone"
                   placeholder="Phone"
-                  className="w-full bg-transparent border border-white/40 p-3 text-white placeholder-white/60 focus:outline-none focus:border-[#C93523]"
+                  className="w-full bg-transparent border border-white/40 p-3 text-white placeholder-white/60 focus:outline-none focus:border-[#8B2635]"
                 />
                 <textarea
                   name="message"
                   placeholder="Briefly describe how I can help *"
                   rows={4}
                   required
-                  className="w-full bg-transparent border border-white/40 p-3 text-white placeholder-white/60 focus:outline-none focus:border-[#C93523]"
+                  className="w-full bg-transparent border border-white/40 p-3 text-white placeholder-white/60 focus:outline-none focus:border-[#8B2635]"
                 />
                 <label className="flex items-start gap-3 text-white/80 text-[13px]">
                   <input type="checkbox" required className="mt-1" />
@@ -97,8 +97,8 @@ export default function Footer() {
                 </label>
                 <button
                   type="submit"
-                  className="bg-[#C93523] hover:bg-[#a82b1c] text-white uppercase font-semibold tracking-wider text-[14px] px-8 py-3 transition-colors"
-                  style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+                  className="bg-[#8B2635] hover:bg-[#6F1D2A] text-white uppercase font-semibold tracking-wider text-[14px] px-8 py-3 transition-colors"
+                  style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
                 >
                   Send Message
                 </button>
@@ -106,58 +106,89 @@ export default function Footer() {
             )}
           </div>
 
-          {/* Right: Office info card */}
-          <div className="bg-white p-8">
+          {/* Right: Office info card with embedded map */}
+          <div className="bg-white p-8 flex flex-col">
             <Link href="/" className="inline-block mb-6">
               <Image
                 src="/images/logo.jpg"
                 alt="Law Office of A. James Mullaney"
                 width={320}
                 height={85}
-                className="h-[80px] w-auto"
+                className="h-[70px] w-auto"
               />
             </Link>
-            <h3
-              className="text-[#03254B] text-[22px] font-semibold mb-3"
-              style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
-            >
-              Jacksonville Office
-            </h3>
-            <div className="w-12 h-[3px] bg-[#C93523] mb-5" />
-            <address className="text-[#03254B] text-[15px] leading-[1.8] not-italic mb-5">
-              8777 San Jose Blvd. Ste. 302
-              <br />
-              Jacksonville, FL 32217
-            </address>
-            <p className="mb-2">
-              <span className="text-gray-500 text-[13px] uppercase tracking-wider">
-                Phone:
-              </span>{" "}
+
+            <div className="grid sm:grid-cols-2 gap-6 items-start">
+              {/* Left column: details */}
+              <div>
+                <h3
+                  className="text-[#03254B] text-[22px] font-semibold mb-2"
+                  style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
+                >
+                  Jacksonville Office
+                </h3>
+                <div className="w-12 h-[3px] bg-[#8B2635] mb-4" />
+                <address className="text-[#03254B] text-[14px] leading-[1.7] not-italic mb-4">
+                  8777 San Jose Blvd.
+                  <br />
+                  Ste. 302
+                  <br />
+                  Jacksonville, FL 32217
+                </address>
+                <p className="mb-1 text-[13px]">
+                  <span className="text-gray-500 uppercase tracking-wider block mb-0.5">
+                    Phone
+                  </span>
+                  <a
+                    href="tel:+1-904-364-4565"
+                    className="text-[#8B2635] font-bold text-[17px] hover:underline"
+                  >
+                    904-364-4565
+                  </a>
+                </p>
+                <p className="mt-3 text-[13px]">
+                  <span className="text-gray-500 uppercase tracking-wider block mb-0.5">
+                    Hours
+                  </span>
+                  <span className="text-[#03254B]">Mon–Fri, 9am–5pm</span>
+                </p>
+              </div>
+
+              {/* Right column: Google Map */}
+              <div>
+                <a
+                  href="https://www.google.com/maps/place/8777+San+Jose+Blvd+%23302,+Jacksonville,+FL+32217"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block border border-gray-200 hover:border-[#8B2635] transition-colors"
+                >
+                  <iframe
+                    title="Law Office of A. James Mullaney — Jacksonville, FL"
+                    src="https://maps.google.com/maps?q=8777+San+Jose+Blvd+Ste+302+Jacksonville+FL+32217&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="200"
+                    style={{ border: 0, pointerEvents: "none" }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div className="flex gap-3 mt-6 pt-6 border-t border-gray-100">
               <a
-                href="tel:+1-904-364-4565"
-                className="text-[#C93523] font-bold text-[18px] hover:underline"
-              >
-                904-364-4565
-              </a>
-            </p>
-            <p className="mb-6">
-              <span className="text-gray-500 text-[13px] uppercase tracking-wider">
-                Hours:
-              </span>{" "}
-              <span className="text-[#03254B]">Mon–Fri, 9am–5pm</span>
-            </p>
-            <div className="flex gap-3">
-              <Link
-                href="/jacksonville-divorce-law-office"
-                className="inline-block bg-[#C93523] text-white uppercase font-semibold tracking-wider text-[12px] px-5 py-2 hover:bg-[#a82b1c] transition-colors"
-                style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+                href="https://www.google.com/maps/dir//8777+San+Jose+Blvd+%23302,+Jacksonville,+FL+32217"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#8B2635] text-white uppercase font-semibold tracking-wider text-[12px] px-5 py-2.5 hover:bg-[#6F1D2A] transition-colors"
+                style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
               >
                 Get Directions
-              </Link>
+              </a>
               <Link
                 href="/contact"
                 className="inline-block border-2 border-[#03254B] text-[#03254B] uppercase font-semibold tracking-wider text-[12px] px-5 py-2 hover:bg-[#03254B] hover:text-white transition-all"
-                style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+                style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
               >
                 Review Us
               </Link>
@@ -172,7 +203,7 @@ export default function Footer() {
           <div>
             <h4
               className="text-white text-[16px] font-semibold mb-4 uppercase tracking-wider"
-              style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+              style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
             >
               Practice Areas
             </h4>
@@ -210,7 +241,7 @@ export default function Footer() {
           <div>
             <h4
               className="text-white text-[16px] font-semibold mb-4 uppercase tracking-wider"
-              style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+              style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
             >
               Firm
             </h4>
@@ -238,7 +269,7 @@ export default function Footer() {
           <div>
             <h4
               className="text-white text-[16px] font-semibold mb-4 uppercase tracking-wider"
-              style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+              style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
             >
               Tools & Resources
             </h4>

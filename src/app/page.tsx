@@ -10,7 +10,7 @@ function Hero() {
       className="relative flex items-center"
       style={{
         backgroundImage:
-          'linear-gradient(90deg, rgba(19, 30, 77, 0.75) 0%, rgba(19, 30, 77, 0.65) 50%, rgba(19, 30, 77, 0.35) 100%), url("/images/banner-jacksonville-new.jpg")',
+          'linear-gradient(90deg, rgba(19, 30, 77, 0.85) 0%, rgba(19, 30, 77, 0.6) 55%, rgba(19, 30, 77, 0.25) 100%), url("/images/jacksonville-hero.jpg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundColor: "#000",
@@ -22,14 +22,14 @@ function Hero() {
       <div className="max-w-[1280px] mx-auto px-6 w-full">
         <div className="max-w-[640px]">
           <p
-            className="text-[#C93523] text-[14px] font-semibold uppercase tracking-[2px] mb-4"
-            style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+            className="text-[#8B2635] text-[14px] font-semibold uppercase tracking-[2px] mb-4"
+            style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
           >
             Experienced. Personable. Effective.
           </p>
           <h1
             className="text-white text-[42px] lg:text-[56px] leading-[1.05] uppercase mb-6"
-            style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+            style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
           >
             <span className="font-normal">An Experienced</span>
             <span className="block font-bold">Family Law Attorney</span>
@@ -43,8 +43,8 @@ function Hero() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-[#C93523] hover:bg-[#a82b1c] text-white uppercase font-bold tracking-wider text-[14px] px-8 py-4 transition-colors"
-              style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+              className="inline-flex items-center gap-2 bg-[#8B2635] hover:bg-[#6F1D2A] text-white uppercase font-bold tracking-wider text-[14px] px-8 py-4 transition-colors"
+              style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
             >
               Schedule A Consultation
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -59,7 +59,7 @@ function Hero() {
             <a
               href="tel:+1-904-364-4565"
               className="inline-flex items-center gap-2 border-2 border-white text-white uppercase font-bold tracking-wider text-[14px] px-8 py-4 hover:bg-white hover:text-[#131E4D] transition-all"
-              style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+              style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
@@ -67,6 +67,153 @@ function Hero() {
               904-364-4565
             </a>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─── Stats Band ─── */
+function StatsBand() {
+  const stats = [
+    { num: "25+", label: "Years of Family Law" },
+    { num: "2", label: "States Licensed · FL & GA" },
+    { num: "1,000+", label: "Cases Resolved" },
+    { num: "100%", label: "Direct Attorney Access" },
+  ];
+  return (
+    <section className="bg-[#131E4D] border-b border-white/10">
+      <div className="max-w-[1280px] mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+        {stats.map((s) => (
+          <div key={s.label} className="text-center border-l-2 border-[#8B2635] first:border-l-0 md:border-l-2 px-4">
+            <div
+              className="text-[#E0B158] text-[42px] leading-[1] mb-2"
+              style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontWeight: 400 }}
+            >
+              {s.num}
+            </div>
+            <div className="text-white/70 text-[13px] uppercase tracking-[1.5px]">
+              {s.label}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+/* ─── Featured Services (Uncontested Divorce + Mediation) ─── */
+function FeaturedServices() {
+  return (
+    <section className="bg-[#FAF7F2] py-24">
+      <div className="max-w-[1280px] mx-auto px-6">
+        <div className="text-center mb-16 max-w-[720px] mx-auto">
+          <p
+            className="text-[#8B2635] text-[13px] font-semibold uppercase tracking-[3px] mb-4"
+            style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
+          >
+            Areas of Focus
+          </p>
+          <h2
+            className="text-[#03254B] text-[44px] leading-[1.15] mb-6"
+            style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontWeight: 400 }}
+          >
+            A better path through <em className="italic">separation</em>
+          </h2>
+          <p className="text-[#03254B]/75 text-[17px] leading-[1.7]">
+            Coming to an agreement saves you a fortune — in legal fees, in time,
+            and in the toll a drawn-out court fight takes on your family. My
+            practice centers on getting you there.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Uncontested Divorce */}
+          <Link
+            href="/divorce/uncontested-divorce-in-jacksonville-fl"
+            className="group bg-white border border-[#03254B]/10 hover:border-[#8B2635] hover:shadow-xl transition-all p-10 flex flex-col"
+          >
+            <div className="flex items-center justify-between mb-6">
+              <span
+                className="text-[#8B2635] text-[13px] font-semibold uppercase tracking-[2px]"
+                style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
+              >
+                01 — Primary Focus
+              </span>
+              <Image
+                src="/images/un-divorce-icon.webp"
+                alt=""
+                width={56}
+                height={56}
+                style={{ filter: "brightness(0) saturate(100%) invert(12%) sepia(40%) saturate(3800%) hue-rotate(215deg) brightness(80%) contrast(100%)" }}
+              />
+            </div>
+            <h3
+              className="text-[#03254B] text-[32px] leading-[1.15] mb-4"
+              style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontWeight: 400 }}
+            >
+              Uncontested Divorce
+            </h3>
+            <p className="text-[#03254B]/75 text-[16px] leading-[1.7] mb-8 flex-1">
+              When you and your spouse can reach agreement on property, support,
+              and parenting, we skip the courtroom. I draft a comprehensive
+              marital settlement agreement, file the paperwork, and handle the
+              single final hearing — typically in weeks, not months.
+            </p>
+            <span
+              className="inline-flex items-center gap-2 text-[#8B2635] uppercase font-semibold tracking-[2px] text-[13px] group-hover:gap-3 transition-all"
+              style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
+            >
+              Learn More
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </span>
+          </Link>
+
+          {/* Mediation */}
+          <Link
+            href="/divorce/divorce-mediation-in-jacksonville"
+            className="group bg-white border border-[#03254B]/10 hover:border-[#8B2635] hover:shadow-xl transition-all p-10 flex flex-col"
+          >
+            <div className="flex items-center justify-between mb-6">
+              <span
+                className="text-[#8B2635] text-[13px] font-semibold uppercase tracking-[2px]"
+                style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
+              >
+                02 — Primary Focus
+              </span>
+              <Image
+                src="/images/mediation-icon.webp"
+                alt=""
+                width={56}
+                height={56}
+                style={{ filter: "brightness(0) saturate(100%) invert(12%) sepia(40%) saturate(3800%) hue-rotate(215deg) brightness(80%) contrast(100%)" }}
+              />
+            </div>
+            <h3
+              className="text-[#03254B] text-[32px] leading-[1.15] mb-4"
+              style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontWeight: 400 }}
+            >
+              Family Law Mediation
+            </h3>
+            <p className="text-[#03254B]/75 text-[16px] leading-[1.7] mb-8 flex-1">
+              As a Florida Supreme Court&ndash;certified family court mediator,
+              I help parties find common ground on the hard issues — time-sharing,
+              asset division, support — without the expense of full-blown
+              litigation. I can serve as your mediator or represent you in
+              mediation.
+            </p>
+            <span
+              className="inline-flex items-center gap-2 text-[#8B2635] uppercase font-semibold tracking-[2px] text-[13px] group-hover:gap-3 transition-all"
+              style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
+            >
+              Learn More
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </span>
+          </Link>
         </div>
       </div>
     </section>
@@ -100,8 +247,8 @@ function PracticeAreaIcon({
         }}
       />
       <span
-        className="text-[#03254B] text-[15px] font-medium leading-[1.4] group-hover:text-[#C93523] transition-colors"
-        style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+        className="text-[#03254B] text-[15px] font-medium leading-[1.4] group-hover:text-[#8B2635] transition-colors"
+        style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
       >
         {label}
       </span>
@@ -113,62 +260,55 @@ function PracticeAreas() {
   return (
     <section className="bg-white pt-20 pb-24 relative overflow-hidden">
       <div className="relative max-w-[1280px] mx-auto px-6">
-        <p
-          className="text-center text-[#03254B] text-[15px] italic mb-16 max-w-[720px] mx-auto"
-          style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
-        >
-          A Jacksonville Attorney And Certified Family Court Mediator
-          Practicing Exclusively In Family Law For 25 Years
-        </p>
+        <div className="text-center mb-16 max-w-[720px] mx-auto">
+          <p
+            className="text-[#8B2635] text-[13px] font-semibold uppercase tracking-[3px] mb-4"
+            style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
+          >
+            Full-Service Family Law
+          </p>
+          <h2
+            className="text-[#03254B] text-[40px] leading-[1.15] mb-4"
+            style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontWeight: 400 }}
+          >
+            Additional <em className="italic">Practice Areas</em>
+          </h2>
+          <p className="text-[#03254B]/70 text-[16px] leading-[1.7]">
+            Beyond my primary focus on uncontested divorce and mediation, I handle
+            the full spectrum of Florida family law matters.
+          </p>
+        </div>
 
-        {/* Top row: 2 icons */}
-        <div className="flex justify-center gap-16 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-12 max-w-[900px] mx-auto">
           <PracticeAreaIcon
             icon="/images/divorce-icon.webp"
             label="Divorce & Separation"
             href="/divorce"
           />
           <PracticeAreaIcon
-            icon="/images/un-divorce-icon.webp"
-            label="Uncontested Divorce"
-            href="/divorce/uncontested-divorce-in-jacksonville-fl"
-          />
-        </div>
-
-        {/* Middle row: icon / heading / icon */}
-        <div className="flex justify-center items-center gap-16 mb-12">
-          <PracticeAreaIcon
             icon="/images/child-icon.webp"
-            label="Child Support Calculator"
-            href="/florida-child-support-calculator"
+            label="Child Support"
+            href="/divorce/child-support"
           />
-          <div className="flex flex-col items-center w-[200px]">
-            <h2
-              className="text-[#03254B] text-[36px] font-normal mb-4 text-center"
-              style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
-            >
-              Practice Areas
-            </h2>
-            <div className="red-divider" />
-          </div>
           <PracticeAreaIcon
             icon="/images/paternity-icon.webp"
             label="Paternity"
             href="/paternity"
           />
-        </div>
-
-        {/* Bottom row: 2 icons */}
-        <div className="flex justify-center gap-16">
-          <PracticeAreaIcon
-            icon="/images/mediation-icon.webp"
-            label="Mediation"
-            href="/divorce/divorce-mediation-in-jacksonville"
-          />
           <PracticeAreaIcon
             icon="/images/parent-icon.webp"
             label="Parenting Plans"
             href="/time-sharing-and-visitation-in-florida"
+          />
+          <PracticeAreaIcon
+            icon="/images/un-divorce-icon.webp"
+            label="Prenuptial Agreements"
+            href="/prenuptial-agreements"
+          />
+          <PracticeAreaIcon
+            icon="/images/mediation-icon.webp"
+            label="Modifications"
+            href="/modifications"
           />
         </div>
       </div>
@@ -192,14 +332,14 @@ function SupportSection() {
       <div className="max-w-[1280px] mx-auto px-6">
         <div className="ml-auto max-w-[650px]">
           <p
-            className="text-[#C93523] text-[13px] font-semibold uppercase tracking-[2px] mb-3"
-            style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+            className="text-[#8B2635] text-[13px] font-semibold uppercase tracking-[2px] mb-3"
+            style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
           >
             Support And Guidance
           </p>
           <h2
             className="text-[#03254B] text-[38px] leading-[1.15] font-bold uppercase mb-5"
-            style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+            style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
           >
             For People With Family Law Concerns
           </h2>
@@ -227,14 +367,14 @@ function EducationSection() {
       <div className="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <p
-            className="text-[#C93523] text-[13px] font-semibold uppercase tracking-[2px] mb-3"
-            style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+            className="text-[#8B2635] text-[13px] font-semibold uppercase tracking-[2px] mb-3"
+            style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
           >
             Sharing Information And Educating Clients
           </p>
           <h2
             className="text-white text-[38px] leading-[1.15] font-bold uppercase mb-5"
-            style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+            style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
           >
             So They Can Make Informed Decisions
           </h2>
@@ -243,7 +383,7 @@ function EducationSection() {
             I believe that knowledge is power. Over the years, I have created a{" "}
             <a
               href="http://podcast.jimmullaney.com/"
-              className="text-white underline hover:text-[#C93523]"
+              className="text-white underline hover:text-[#8B2635]"
             >
               podcast
             </a>{" "}
@@ -251,7 +391,7 @@ function EducationSection() {
             layman&apos;s terms. These videos are available on my{" "}
             <a
               href="https://www.youtube.com/@Jimmullaney"
-              className="text-white underline hover:text-[#C93523]"
+              className="text-white underline hover:text-[#8B2635]"
             >
               YouTube page
             </a>
@@ -281,71 +421,88 @@ function EducationSection() {
 /* ─── Meet The Attorney + Welcome Video ─── */
 function MeetAttorneySection() {
   return (
-    <section className="bg-[#03254B] py-20">
-      <div className="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-3 gap-12 items-start">
+    <section className="bg-[#03254B] py-24">
+      <div className="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+        <div className="relative">
+          <div className="absolute -top-4 -left-4 w-24 h-24 border-t-[3px] border-l-[3px] border-[#8B2635] z-0" />
+          <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-[3px] border-r-[3px] border-[#8B2635] z-0" />
+          <Image
+            src="/images/mullaney-portrait.png"
+            alt="A. James Mullaney, Jacksonville Family Law Attorney"
+            width={900}
+            height={676}
+            className="relative w-full h-auto"
+          />
+        </div>
+
         <div>
           <p
-            className="text-[#C93523] text-[13px] font-semibold uppercase tracking-[2px] mb-3"
-            style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+            className="text-[#8B2635] text-[13px] font-semibold uppercase tracking-[3px] mb-4"
+            style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
           >
             Meet The Attorney
           </p>
           <h2
-            className="text-white text-[32px] font-bold uppercase mb-4"
-            style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+            className="text-white text-[44px] leading-[1.1] mb-6"
+            style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontWeight: 400 }}
           >
-            A. James Mullaney
+            A. James <em className="italic text-[#E0B158]">Mullaney</em>
           </h2>
-          <div className="red-divider mb-6" />
-          <div className="bg-white/5 border border-white/10 p-6">
-            <Image
-              src="/images/mullaney.jpg"
-              alt="A. James Mullaney"
-              width={260}
-              height={188}
-              className="w-full mb-4"
-            />
-            <h3
-              className="text-white text-[18px] font-semibold mb-1"
-              style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
-            >
-              A. James Mullaney
-            </h3>
-            <p className="text-white/70 text-[14px] mb-4">Founder</p>
-            <Link
-              href="/attorney/mullaney-a-james"
-              className="inline-block text-[#C93523] font-semibold uppercase tracking-wider text-[12px] hover:text-white"
-              style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
-            >
-              Read Full Bio &rarr;
-            </Link>
-          </div>
-        </div>
-
-        <div className="lg:col-span-2">
+          <div className="red-divider mb-8" />
           <p
-            className="text-[#C93523] text-[13px] font-semibold uppercase tracking-[2px] mb-3"
-            style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+            className="text-white/90 text-[19px] leading-[1.7] mb-6 italic"
+            style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
+          >
+            &ldquo;My clients don&apos;t need another lawyer talking down to them.
+            They need someone who will sit across the table, explain the law
+            plainly, and help them make decisions they can live with for the rest
+            of their lives.&rdquo;
+          </p>
+          <p className="text-white/75 text-[16px] leading-[1.8] mb-8">
+            Jim has practiced family law exclusively for over 25 years. He is a
+            Florida Supreme Court&ndash;certified family court mediator and is
+            licensed in both Florida and Georgia. His practice emphasizes
+            clarity, efficiency, and resolution without unnecessary litigation.
+          </p>
+          <Link
+            href="/attorney/mullaney-a-james"
+            className="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white uppercase font-semibold tracking-[2px] text-[12px] px-6 py-3 hover:bg-white/5 transition-all"
+            style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
+          >
+            Read Full Bio
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </Link>
+        </div>
+      </div>
+
+      {/* Welcome video below */}
+      <div className="max-w-[1000px] mx-auto mt-24 px-6">
+        <div className="text-center mb-10">
+          <p
+            className="text-[#8B2635] text-[13px] font-semibold uppercase tracking-[3px] mb-3"
+            style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
           >
             Welcome
           </p>
           <h2
-            className="text-white text-[32px] font-bold uppercase mb-4"
-            style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+            className="text-white text-[36px] mb-4"
+            style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontWeight: 400 }}
           >
-            Hear From Me Directly
+            Hear <em className="italic text-[#E0B158]">directly</em> from Jim
           </h2>
-          <div className="red-divider mb-6" />
-          <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
-            <iframe
-              className="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/BeM5Fka4pHc"
-              title="Jacksonville Divorce Lawyer | Florida Family Law Attorney"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            />
-          </div>
+          <div className="red-divider mx-auto" />
+        </div>
+        <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/BeM5Fka4pHc"
+            title="Jacksonville Divorce Lawyer | Florida Family Law Attorney"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
         </div>
       </div>
     </section>
@@ -360,7 +517,7 @@ function QuestionnaireSection() {
         <div>
           <h2
             className="text-white text-[24px] font-bold uppercase"
-            style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+            style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
           >
             Client Questionnaire
           </h2>
@@ -373,8 +530,8 @@ function QuestionnaireSection() {
           href="https://form.jotform.com/Mullaney/form"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#C93523] hover:bg-[#a82b1c] text-white uppercase font-bold tracking-wider text-[14px] px-8 py-3 transition-colors whitespace-nowrap"
-          style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+          className="bg-[#8B2635] hover:bg-[#6F1D2A] text-white uppercase font-bold tracking-wider text-[14px] px-8 py-3 transition-colors whitespace-nowrap"
+          style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
         >
           Complete the Questionnaire
         </a>
@@ -398,14 +555,14 @@ function CTASection() {
     >
       <div className="max-w-[900px] mx-auto px-6 text-center">
         <p
-          className="text-[#C93523] text-[13px] font-semibold uppercase tracking-[2px] mb-4"
-          style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+          className="text-[#8B2635] text-[13px] font-semibold uppercase tracking-[2px] mb-4"
+          style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
         >
           Caring And Efficient Service
         </p>
         <h2
           className="text-white text-[42px] leading-[1.15] font-bold uppercase mb-6"
-          style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+          style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
         >
           That Is Good For You, Your Family And Your Wallet
         </h2>
@@ -436,11 +593,11 @@ function CTASection() {
 /* ─── "If You Have Questions" red bar ─── */
 function QuestionsBar() {
   return (
-    <section className="bg-[#C93523] py-6">
+    <section className="bg-[#8B2635] py-6">
       <div className="max-w-[1280px] mx-auto px-6 text-center">
         <p
           className="text-white text-[26px] lg:text-[32px] font-bold uppercase tracking-wide"
-          style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+          style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
         >
           If You Have Questions, I Have Answers!
         </p>
@@ -456,6 +613,8 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <StatsBand />
+        <FeaturedServices />
         <PracticeAreas />
         <SupportSection />
         <EducationSection />

@@ -23,13 +23,13 @@ export default function PageHero({ title, breadcrumbs = [] }: PageHeroProps) {
       <div className="max-w-[1200px] mx-auto px-6 w-full">
         <p
           className="text-white/80 text-[14px] uppercase tracking-wider mb-4"
-          style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+          style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
         >
           Experienced. Personable. Effective.
         </p>
         <h1
           className="text-white text-[38px] lg:text-[48px] leading-[1.1] font-normal mb-4"
-          style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+          style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
         >
           {title}
         </h1>

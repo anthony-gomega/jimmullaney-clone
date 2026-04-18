@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
-import { Montserrat, Jost } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
 });
 
-const jost = Jost({
-  variable: "--font-jost",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -35,10 +34,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${jost.variable}`}>
+    <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
       <body
         className="min-h-screen"
-        style={{ fontFamily: "Montserrat, Helvetica, Arial, Lucida, sans-serif" }}
+        style={{ fontFamily: "var(--font-inter), Helvetica, Arial, sans-serif" }}
       >
         {children}
       </body>

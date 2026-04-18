@@ -6,7 +6,7 @@ export default function GetHelpBar() {
       <div className="max-w-[1200px] mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <h3
           className="text-white text-[24px] font-bold uppercase"
-          style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+          style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
         >
           Get Help Now
         </h3>
@@ -19,8 +19,8 @@ export default function GetHelpBar() {
           </a>
           <Link
             href="/contact"
-            className="border-2 border-white text-white uppercase font-semibold tracking-wider text-[13px] px-6 py-2 hover:bg-white hover:text-[#C93523] transition-all"
-            style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+            className="border-2 border-white text-white uppercase font-semibold tracking-wider text-[13px] px-6 py-2 hover:bg-white hover:text-[#8B2635] transition-all"
+            style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
           >
             Send A Message
           </Link>

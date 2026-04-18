@@ -130,8 +130,8 @@ export default function CalculatorPage() {
         </div>
         <button
           type="submit"
-          className="bg-[#C93523] text-white uppercase font-semibold tracking-wider text-[14px] px-8 py-3 hover:bg-[#a82b1c] transition-colors"
-          style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+          className="bg-[#8B2635] text-white uppercase font-semibold tracking-wider text-[14px] px-8 py-3 hover:bg-[#6F1D2A] transition-colors"
+          style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
         >
           Calculate
         </button>

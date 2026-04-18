@@ -66,8 +66,8 @@ function NavItem({ item }: { item: MenuItem }) {
     >
       <Link
         href={item.href}
-        className="flex items-center gap-1 px-3 py-3 text-[13px] font-semibold uppercase tracking-wide text-[#03254B] hover:text-[#C93523] transition-colors whitespace-nowrap"
-        style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+        className="flex items-center gap-1 px-3 py-3 text-[13px] font-semibold uppercase tracking-wide text-[#03254B] hover:text-[#8B2635] transition-colors whitespace-nowrap"
+        style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
       >
         {item.label}
         {hasChildren && (
@@ -87,7 +87,7 @@ function NavItem({ item }: { item: MenuItem }) {
       {hasChildren && open && (
         <ul
           className="absolute left-0 top-full bg-[#03254B] min-w-[260px] shadow-xl z-50"
-          style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+          style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
         >
           {item.children!.map((child) => (
             <SubNavItem key={child.label} item={child} />
@@ -110,7 +110,7 @@ function SubNavItem({ item }: { item: MenuItem }) {
     >
       <Link
         href={item.href}
-        className="flex items-center justify-between px-4 py-3 text-[13px] text-white hover:bg-[#C93523] transition-colors border-b border-white/10 last:border-b-0"
+        className="flex items-center justify-between px-4 py-3 text-[13px] text-white hover:bg-[#8B2635] transition-colors border-b border-white/10 last:border-b-0"
       >
         <span>{item.label}</span>
         {hasChildren && (
@@ -129,7 +129,7 @@ function SubNavItem({ item }: { item: MenuItem }) {
             <li key={child.label}>
               <Link
                 href={child.href}
-                className="block px-4 py-3 text-[13px] text-white hover:bg-[#C93523] transition-colors border-b border-white/10 last:border-b-0"
+                className="block px-4 py-3 text-[13px] text-white hover:bg-[#8B2635] transition-colors border-b border-white/10 last:border-b-0"
               >
                 {child.label}
               </Link>
@@ -170,8 +170,8 @@ export default function Header() {
         <div className="flex items-center gap-3 flex-shrink-0">
           <a
             href="tel:+1-904-364-4565"
-            className="hidden lg:inline-flex items-center gap-2 bg-[#C93523] hover:bg-[#a82b1c] text-white font-bold text-[17px] px-7 py-4 transition-colors"
-            style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+            className="hidden lg:inline-flex items-center gap-2 bg-[#8B2635] hover:bg-[#6F1D2A] text-white font-bold text-[17px] px-7 py-4 transition-colors"
+            style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -210,7 +210,7 @@ export default function Header() {
                 <Link
                   href={item.href}
                   className="block px-6 py-3 text-[14px] font-semibold uppercase text-[#03254B]"
-                  style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+                  style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
                   onClick={() => setMobileOpen(false)}
                 >
                   {item.label}
@@ -235,8 +235,8 @@ export default function Header() {
             <li className="px-6 py-4 bg-gray-50">
               <a
                 href="tel:+1-904-364-4565"
-                className="block text-center bg-[#C93523] text-white font-bold px-5 py-3"
-                style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+                className="block text-center bg-[#8B2635] text-white font-bold px-5 py-3"
+                style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
               >
                 Call 904-364-4565
               </a>

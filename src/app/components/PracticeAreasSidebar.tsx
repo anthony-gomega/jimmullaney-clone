@@ -26,11 +26,11 @@ export default function PracticeAreasSidebar() {
       <div className="bg-[#131E4D] p-6">
         <h3
           className="text-white text-[20px] font-semibold mb-4 uppercase"
-          style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+          style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
         >
           Practice Areas
         </h3>
-        <div className="w-12 h-[3px] bg-[#C93523] mb-4"></div>
+        <div className="w-12 h-[3px] bg-[#8B2635] mb-4"></div>
         <ul className="space-y-2">
           {practiceAreas.map((area) => (
             <li key={area.href}>
@@ -45,10 +45,10 @@ export default function PracticeAreasSidebar() {
         </ul>
       </div>
 
-      <div className="bg-[#C93523] p-6 mt-6">
+      <div className="bg-[#8B2635] p-6 mt-6">
         <h3
           className="text-white text-[20px] font-semibold mb-3 uppercase"
-          style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+          style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
         >
           Get Help Now
         </h3>
@@ -63,8 +63,8 @@ export default function PracticeAreasSidebar() {
         </a>
         <Link
           href="/contact"
-          className="inline-block border-2 border-white text-white uppercase font-semibold tracking-wider text-[13px] px-5 py-2 hover:bg-white hover:text-[#C93523] transition-all"
-          style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+          className="inline-block border-2 border-white text-white uppercase font-semibold tracking-wider text-[13px] px-5 py-2 hover:bg-white hover:text-[#8B2635] transition-all"
+          style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
         >
           Send A Message
         </Link>

@@ -66,7 +66,7 @@ export default function BlogPage() {
             <p className="mt-2">{post.excerpt}</p>
             <Link
               href={post.href}
-              className="inline-block mt-2 text-[#C93523] font-semibold"
+              className="inline-block mt-2 text-[#8B2635] font-semibold"
             >
               Read more &rarr;
             </Link>

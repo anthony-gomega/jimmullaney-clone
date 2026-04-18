@@ -51,7 +51,7 @@ export default function ContactPage() {
                 type="text"
                 name="name"
                 required
-                className="w-full border border-gray-300 p-3 focus:outline-none focus:border-[#C93523]"
+                className="w-full border border-gray-300 p-3 focus:outline-none focus:border-[#8B2635]"
               />
             </div>
             <div>
@@ -60,7 +60,7 @@ export default function ContactPage() {
                 type="email"
                 name="email"
                 required
-                className="w-full border border-gray-300 p-3 focus:outline-none focus:border-[#C93523]"
+                className="w-full border border-gray-300 p-3 focus:outline-none focus:border-[#8B2635]"
               />
             </div>
             <div>
@@ -68,7 +68,7 @@ export default function ContactPage() {
               <input
                 type="tel"
                 name="phone"
-                className="w-full border border-gray-300 p-3 focus:outline-none focus:border-[#C93523]"
+                className="w-full border border-gray-300 p-3 focus:outline-none focus:border-[#8B2635]"
               />
             </div>
             <div>
@@ -77,13 +77,13 @@ export default function ContactPage() {
                 name="message"
                 required
                 rows={5}
-                className="w-full border border-gray-300 p-3 focus:outline-none focus:border-[#C93523]"
+                className="w-full border border-gray-300 p-3 focus:outline-none focus:border-[#8B2635]"
               ></textarea>
             </div>
             <button
               type="submit"
-              className="bg-[#C93523] text-white uppercase font-semibold tracking-wider text-[14px] px-8 py-3 hover:bg-[#a82b1c] transition-colors"
-              style={{ fontFamily: "Jost, Helvetica, Arial, sans-serif" }}
+              className="bg-[#8B2635] text-white uppercase font-semibold tracking-wider text-[14px] px-8 py-3 hover:bg-[#6F1D2A] transition-colors"
+              style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
             >
               Send Message
             </button>
