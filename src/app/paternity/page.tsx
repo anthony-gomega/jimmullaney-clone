@@ -13,89 +13,145 @@ export default function PaternityPage() {
   return (
     <InnerPage title="Jacksonville Paternity Lawyer" breadcrumbs={[{ label: "Paternity" }]}>
       <p>
-        When a woman gives birth, the state automatically assumes that she is
-        the baby&apos;s biological mother. If she is married, the state assumes
-        that the husband is the child&apos;s biological father. When parents
-        are not married or one of them has doubt regarding the child&apos;s
-        biological father, they must establish paternity.
-      </p>
-      <p>
-        As a family law attorney with over 24 years of experience, I can help
-        you. When you work with me at the Law Office of A. James Mullaney, you
-        can expect knowledgeable guidance, excellent communication and a
-        commitment to finding mutually satisfactory solutions calmly.
+        In Florida, paternity is a legal concept, not a biological one. The
+        law presumes that a child born to a married couple is the legal
+        child of both spouses, regardless of genetics. When parents are
+        unmarried, however, the legal father must be <strong>established
+        by court order or acknowledged in a specific legal form</strong>{" "}
+        before either parent has enforceable rights or obligations.
       </p>
 
-      <h2>Legal Paternity For Unmarried Or Nonbiological Parents</h2>
+      <h2>Why Establishing Paternity Matters</h2>
       <p>
-        A paternity action takes place when a child is born to parents who are
-        not married. A paternity case commonly arises in the following ways:
+        Many parents believe that putting a father&apos;s name on the birth
+        certificate is enough. In most cases it is not. Under Florida
+        Statutes Chapter 742, an unmarried biological father has essentially
+        <em> no</em> enforceable rights to time-sharing or decision-making
+        until a court formally adjudicates him the legal father &mdash;
+        even if he signed the birth certificate and has been involved with
+        the child from day one.
+      </p>
+      <p>
+        Establishing paternity creates the legal foundation for:
       </p>
       <ul>
-        <li>By a mother seeking child support from the father.</li>
-        <li>By a father trying to establish visitation with the child.</li>
+        <li>Enforceable <Link href="/time-sharing-and-visitation-in-florida">time-sharing and a parenting plan</Link></li>
+        <li><Link href="/divorce/child-support">Child support</Link> obligations</li>
+        <li>The child&apos;s right to inherit from the father</li>
+        <li>The child&apos;s right to Social Security, veterans&apos;, and other benefits through the father</li>
+        <li>Access to the father&apos;s medical history</li>
+        <li>Health-insurance coverage through the father&apos;s employer</li>
+        <li>The father&apos;s consent being required for adoption or name change</li>
       </ul>
-      <p>
-        When a child is born to unmarried parents, the mother, by statute, is
-        the guardian of the child. Basically, a father has no rights even if
-        his name appears on the birth certificate. In fact, with a few
-        exceptions, an unmarried mother can give her child up for adoption
-        without the biological father&apos;s knowledge or consent.
-      </p>
-      <p>
-        A father must be declared by the court to have any rights (i.e.,{" "}
-        <Link href="/time-sharing-and-visitation-in-florida">
-          custody or visitation
-        </Link>
-        ) or obligations (i.e., child support) regarding the child. If either
-        parent has any question as to whether the father is the actual
-        biological father, a DNA paternity test must be requested and ordered
-        by the court. If both parents agree that the father is the biological
-        father, then no test is needed.
-      </p>
 
-      <h2>Guidance From An Experienced Jacksonville Paternity Lawyer</h2>
+      <h2>Three Ways to Establish Paternity in Florida</h2>
+      <p>There are three legally recognized ways:</p>
+      <ol>
+        <li>
+          <strong>Marriage.</strong> If the parents marry after the child is
+          born, paternity is automatically established (subject to certain
+          exceptions).
+        </li>
+        <li>
+          <strong>Voluntary Acknowledgment of Paternity.</strong> Both
+          parents sign a form at the hospital or later through the Florida
+          Department of Health. The form becomes binding after 60 days and
+          creates legal paternity without any court involvement.
+        </li>
+        <li>
+          <strong>Court order.</strong> A paternity action is filed in
+          circuit court. The court either accepts the parties&apos;
+          agreement or orders DNA testing, and then enters a judgment
+          establishing paternity.
+        </li>
+      </ol>
+
+      <h2>How a Contested Paternity Case Works</h2>
       <p>
-        Establishing paternity in Florida is a crucial step for parents to
-        define their legal rights and responsibilities. After establishing
-        paternity, either by mutual agreement or a positive DNA test, it opens
-        the door to addressing two primary issues:
+        A paternity case typically moves through these steps:
       </p>
+      <ol>
+        <li>
+          A Petition to Determine Paternity is filed by either parent (or
+          the Florida Department of Revenue).
+        </li>
+        <li>
+          The other parent is served and has 20 days to answer. The answer
+          admits or denies paternity.
+        </li>
+        <li>
+          If paternity is disputed, the court orders a scientifically
+          reliable DNA test. Florida requires a 95% probability of paternity
+          (the test threshold is well above that).
+        </li>
+        <li>
+          If the test confirms paternity (or if both parties agree), the
+          court enters a judgment. The same judgment addresses time-sharing,
+          a parenting plan, child support, and payment of back-support.
+        </li>
+      </ol>
+
+      <h2>Common Paternity Scenarios</h2>
       <ul>
         <li>
-          <strong>Time-sharing:</strong> Often referred to as visitation, this
-          determines how parents will divide their time with the child. A
-          detailed parenting plan is typically developed to outline the
-          time-sharing schedule, including holidays and special occasions.
+          <strong>Mother seeking support.</strong> A mother can file to
+          have the alleged father adjudicated and child support ordered,
+          including back-support for the time before the case was filed.
         </li>
         <li>
-          <strong>
-            <Link href="/divorce/child-support">Child support</Link>:
-          </strong>{" "}
-          Ensures that the child&apos;s financial needs are met. The court
-          calculates the amount based on state guidelines, which consider
-          factors like each parent&apos;s income, the number of overnight stays
-          and any special needs of the child.
+          <strong>Father seeking time-sharing.</strong> A father who has
+          been prevented from seeing his child can file to establish
+          paternity and obtain an enforceable parenting plan.
+        </li>
+        <li>
+          <strong>Disestablishment.</strong> A man who has been paying
+          support but learns he is not the biological father can petition to
+          disestablish paternity under strict statutory conditions.{" "}
+          <Link href="/i-was-served-with-child-support-papers-i-am-not-the-father-what-should-i-do">
+            Learn what to do if you&apos;ve been served with child support papers
+          </Link>{" "}
+          (if you believe you are not the father).
+        </li>
+        <li>
+          <strong>Married but biological father is someone else.</strong>{" "}
+          When the presumed father (the husband) and the biological father
+          are different, the biological father has very narrow legal options
+          in Florida. This is highly fact-specific and requires careful
+          analysis.
         </li>
       </ul>
+
+      <h2>Rights &amp; Obligations After Establishment</h2>
       <p>
-        Establishing paternity is not only vital for addressing these issues
-        but also for securing a child&apos;s right to benefits such as health
-        insurance, inheritance and access to medical history. Additionally,
-        paternity can impact other family law matters, such as custody
-        disputes, making it essential to seek guidance from an experienced
-        Jacksonville paternity attorney who can advocate for the best interests
-        of both the parent and child.
+        Once paternity is established, both parents share identical legal
+        rights and responsibilities:
+      </p>
+      <ul>
+        <li>Time-sharing under a court-approved parenting plan (typically now subject to Florida&apos;s 50/50 presumption)</li>
+        <li>Shared parental responsibility for major decisions &mdash; unless the court orders sole responsibility</li>
+        <li>Child support calculated under Florida&apos;s guidelines (§61.30)</li>
+        <li>Responsibility for health insurance, educational expenses, and uncovered medical costs</li>
+        <li>Rights around relocation and out-of-state travel with the child</li>
+      </ul>
+
+      <h2>Time Limits</h2>
+      <p>
+        There is no statute of limitations on filing a Florida paternity
+        action; it can generally be brought any time before the child turns
+        18. But waiting has practical consequences: memories fade, people
+        move, and child support typically cannot be recovered for periods
+        before the petition is filed.
       </p>
 
-      <h2>Enforce Your Rights With The Help Of A Jacksonville Paternity Lawyer</h2>
+      <h2>How I Can Help</h2>
       <p>
-        If a paternity case has been filed against you, or if you would like to
-        start a paternity case, you should consult with a Jacksonville
-        paternity lawyer. You will find capable legal counsel with me at the
-        Law Office of A. James Mullaney. Please call{" "}
+        I have spent over 25 years handling Florida paternity cases &mdash;
+        on both sides. I can help you establish paternity, negotiate a
+        parenting plan and support order, contest or confirm paternity with
+        DNA testing, or address the rare but complicated cases where the
+        biological and legal fathers are different. Call{" "}
         <a href="tel:+1-904-364-4565">904-364-4565</a> or{" "}
-        <Link href="/contact">send me an email</Link> to schedule a
+        <Link href="/contact">contact me online</Link> to schedule a
         consultation.
       </p>
     </InnerPage>

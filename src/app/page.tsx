@@ -27,16 +27,16 @@ function Hero() {
         paddingBottom: 120,
       }}
     >
-      {/* Sharp background image — no rotation/scale so we keep the original pixel fidelity */}
+      {/* Full-resolution background image served unoptimized so the source
+          JPEG pixels reach the browser untouched. */}
       <Image
         src="/images/jacksonville-hero.jpg"
         alt=""
         fill
         priority
-        quality={95}
+        unoptimized
         sizes="100vw"
         className="object-cover object-center z-0"
-        style={{ imageRendering: "crisp-edges" }}
       />
       {/* Gradient overlay — lighter on the right so the skyline stays visible */}
       <div
