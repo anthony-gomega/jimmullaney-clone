@@ -157,14 +157,14 @@ export default function Footer() {
               {/* Right column: Google Map */}
               <div>
                 <a
-                  href="https://www.google.com/maps/place/8777+San+Jose+Blvd+%23302,+Jacksonville,+FL+32217"
+                  href="https://www.google.com/maps/search/?api=1&query=30.22152%2C-81.6163"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block border border-gray-200 hover:border-[#8B2635] transition-colors"
                 >
                   <iframe
                     title="Law Office of A. James Mullaney — Jacksonville, FL"
-                    src="https://maps.google.com/maps?q=8777+San+Jose+Blvd+Ste+302+Jacksonville+FL+32217&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                    src="https://maps.google.com/maps?ll=30.22152,-81.6163&t=m&z=16&output=embed"
                     width="100%"
                     height="200"
                     style={{ border: 0, pointerEvents: "none" }}
@@ -177,7 +177,7 @@ export default function Footer() {
 
             <div className="flex gap-3 mt-6 pt-6 border-t border-gray-100">
               <a
-                href="https://www.google.com/maps/dir//8777+San+Jose+Blvd+%23302,+Jacksonville,+FL+32217"
+                href="https://www.google.com/maps/dir/?api=1&destination=30.22152%2C-81.6163"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-[#8B2635] text-white uppercase font-semibold tracking-wider text-[12px] px-5 py-2.5 hover:bg-[#6F1D2A] transition-colors"

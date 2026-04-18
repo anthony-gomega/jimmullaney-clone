@@ -33,13 +33,47 @@ const navigation: MenuItem[] = [
           { label: "Alimony", href: "/divorce/alimony" },
           { label: "Military Issues", href: "/divorce/military-issues" },
           { label: "Contested Divorce", href: "/divorce/contested-divorce" },
-          { label: "Uncontested Divorce", href: "/divorce/uncontested-divorce-in-jacksonville-fl" },
+          {
+            label: "Uncontested Divorce",
+            href: "/divorce/uncontested-divorce-in-jacksonville-fl",
+            children: [
+              {
+                label: "Step-By-Step Guide To Filing Uncontested Divorce",
+                href: "/divorce/uncontested-divorce-in-jacksonville-fl/step-by-step-guide-to-filing-uncontested-divorce-in-jacksonville",
+              },
+              {
+                label: "Florida Marital Settlement Agreements",
+                href: "/divorce/uncontested-divorce-in-jacksonville-fl/florida-marital-settlement-agreements",
+              },
+              {
+                label: "Online vs. Attorney-Assisted",
+                href: "/divorce/uncontested-divorce-in-jacksonville-fl/online-uncontested-divorce-vs-attorney-assisted-pros-and-cons",
+              },
+              {
+                label: "Uncontested vs. Simplified Divorce",
+                href: "/divorce/uncontested-divorce-in-jacksonville-fl/uncontested-vs-simplified-divorce-in-florida",
+              },
+              {
+                label: "What Happens at the Final Hearing",
+                href: "/divorce/uncontested-divorce-in-jacksonville-fl/what-happens-at-the-final-hearing-for-an-uncontested-divorce-in-florida",
+              },
+            ],
+          },
           { label: "Divorce Mediation", href: "/divorce/divorce-mediation-in-jacksonville" },
           { label: "Annulment", href: "/annulment-lawyer-in-jacksonville" },
           { label: "Equitable Distribution", href: "/divorce/equitable-distribution" },
         ],
       },
-      { label: "Parenting Plans", href: "/time-sharing-and-visitation-in-florida" },
+      {
+        label: "Parenting Plans",
+        href: "/time-sharing-and-visitation-in-florida",
+        children: [
+          {
+            label: "Relocations",
+            href: "/time-sharing-and-visitation-in-florida/relocations",
+          },
+        ],
+      },
       { label: "Paternity", href: "/paternity" },
       { label: "Child Support", href: "/divorce/child-support" },
       { label: "Prenuptial Agreements", href: "/prenuptial-agreements" },
@@ -124,16 +158,9 @@ function SubNavItem({ item }: { item: MenuItem }) {
         )}
       </Link>
       {hasChildren && open && (
-        <ul className="absolute left-full top-0 bg-[#03254B] min-w-[260px] shadow-xl">
+        <ul className="absolute left-full top-0 bg-[#03254B] min-w-[320px] shadow-xl">
           {item.children!.map((child) => (
-            <li key={child.label}>
-              <Link
-                href={child.href}
-                className="block px-4 py-3 text-[13px] text-white hover:bg-[#8B2635] transition-colors border-b border-white/10 last:border-b-0"
-              >
-                {child.label}
-              </Link>
-            </li>
+            <SubNavItem key={child.label} item={child} />
           ))}
         </ul>
       )}

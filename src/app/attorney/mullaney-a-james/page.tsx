@@ -17,11 +17,11 @@ export default function AttorneyPage() {
     >
       <div className="flex flex-col md:flex-row gap-8 items-start">
         <Image
-          src="/images/mullaney.jpg"
-          alt="A. James Mullaney"
-          width={280}
-          height={201}
-          className="flex-shrink-0"
+          src="/images/mullaney-portrait.png"
+          alt="A. James Mullaney, Jacksonville Family Law Attorney"
+          width={600}
+          height={451}
+          className="flex-shrink-0 w-full md:w-[360px] h-auto"
         />
         <div>
           <h2 style={{ borderBottom: "none" }}>Founder</h2>

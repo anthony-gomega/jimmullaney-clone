@@ -7,18 +7,37 @@ import Footer from "./components/Footer";
 function Hero() {
   return (
     <section
-      className="relative flex items-center"
+      className="relative flex items-center overflow-hidden"
       style={{
-        backgroundImage:
-          'linear-gradient(90deg, rgba(19, 30, 77, 0.85) 0%, rgba(19, 30, 77, 0.6) 55%, rgba(19, 30, 77, 0.25) 100%), url("/images/jacksonville-hero.jpg")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundColor: "#000",
-        minHeight: "620px",
+        backgroundColor: "#0e1a3f",
+        minHeight: "640px",
         paddingTop: 120,
         paddingBottom: 120,
       }}
     >
+      {/* Background image, slightly rotated to level the tilted skyline and scaled to hide empty corners */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: 'url("/images/jacksonville-hero.jpg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center 40%",
+          transform: "rotate(-0.7deg) scale(1.08)",
+          transformOrigin: "center center",
+          filter: "brightness(1.05) contrast(1.02)",
+        }}
+      />
+      {/* Gradient overlay — lighter on the right so the skyline stays visible */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-0"
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(14, 26, 63, 0.82) 0%, rgba(14, 26, 63, 0.5) 45%, rgba(14, 26, 63, 0.15) 100%)",
+        }}
+      />
+      <div className="relative z-10 w-full">
       <div className="max-w-[1280px] mx-auto px-6 w-full">
         <div className="max-w-[640px]">
           <p
@@ -69,6 +88,7 @@ function Hero() {
           </div>
         </div>
       </div>
+      </div>
     </section>
   );
 }
@@ -76,18 +96,20 @@ function Hero() {
 /* ─── Stats Band ─── */
 function StatsBand() {
   const stats = [
-    { num: "25+", label: "Years of Family Law" },
-    { num: "2", label: "States Licensed · FL & GA" },
-    { num: "1,000+", label: "Cases Resolved" },
-    { num: "100%", label: "Direct Attorney Access" },
+    { num: "25+", label: "Years Exclusively Family Law" },
+    { num: "FL & GA", label: "Licensed In Two States" },
+    { num: "Certified", label: "FL Supreme Court Mediator" },
   ];
   return (
     <section className="bg-[#131E4D] border-b border-white/10">
-      <div className="max-w-[1280px] mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
-        {stats.map((s) => (
-          <div key={s.label} className="text-center border-l-2 border-[#8B2635] first:border-l-0 md:border-l-2 px-4">
+      <div className="max-w-[1280px] mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+        {stats.map((s, i) => (
+          <div
+            key={s.label}
+            className={`text-center px-4 ${i > 0 ? "md:border-l md:border-white/15" : ""}`}
+          >
             <div
-              className="text-[#E0B158] text-[42px] leading-[1] mb-2"
+              className="text-[#E0B158] text-[36px] leading-[1.1] mb-2"
               style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontWeight: 400 }}
             >
               {s.num}
@@ -108,18 +130,13 @@ function FeaturedServices() {
     <section className="bg-[#FAF7F2] py-24">
       <div className="max-w-[1280px] mx-auto px-6">
         <div className="text-center mb-16 max-w-[720px] mx-auto">
-          <p
-            className="text-[#8B2635] text-[13px] font-semibold uppercase tracking-[3px] mb-4"
-            style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
-          >
-            Areas of Focus
-          </p>
           <h2
             className="text-[#03254B] text-[44px] leading-[1.15] mb-6"
             style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontWeight: 400 }}
           >
             A better path through <em className="italic">separation</em>
           </h2>
+          <div className="red-divider mx-auto mb-6" />
           <p className="text-[#03254B]/75 text-[17px] leading-[1.7]">
             Coming to an agreement saves you a fortune — in legal fees, in time,
             and in the toll a drawn-out court fight takes on your family. My
@@ -133,13 +150,7 @@ function FeaturedServices() {
             href="/divorce/uncontested-divorce-in-jacksonville-fl"
             className="group bg-white border border-[#03254B]/10 hover:border-[#8B2635] hover:shadow-xl transition-all p-10 flex flex-col"
           >
-            <div className="flex items-center justify-between mb-6">
-              <span
-                className="text-[#8B2635] text-[13px] font-semibold uppercase tracking-[2px]"
-                style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
-              >
-                01 — Primary Focus
-              </span>
+            <div className="flex items-center justify-end mb-6">
               <Image
                 src="/images/un-divorce-icon.webp"
                 alt=""
@@ -176,13 +187,7 @@ function FeaturedServices() {
             href="/divorce/divorce-mediation-in-jacksonville"
             className="group bg-white border border-[#03254B]/10 hover:border-[#8B2635] hover:shadow-xl transition-all p-10 flex flex-col"
           >
-            <div className="flex items-center justify-between mb-6">
-              <span
-                className="text-[#8B2635] text-[13px] font-semibold uppercase tracking-[2px]"
-                style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
-              >
-                02 — Primary Focus
-              </span>
+            <div className="flex items-center justify-end mb-6">
               <Image
                 src="/images/mediation-icon.webp"
                 alt=""
