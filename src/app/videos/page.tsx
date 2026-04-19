@@ -128,8 +128,8 @@ export default function VideosPage() {
         .
       </p>
 
-      {/* Welcome video */}
-      <div className="my-10">
+      {/* Welcome video — smaller, centered */}
+      <div className="my-10 max-w-[720px] mx-auto">
         <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
           <iframe
             className="absolute top-0 left-0 w-full h-full"
@@ -151,16 +151,16 @@ export default function VideosPage() {
         aria-label="Video categories"
       >
         <h2
-          className="text-[18px] font-semibold uppercase tracking-wider mb-4 text-[#03254B]"
+          className="text-[15px] font-semibold uppercase tracking-[2px] mb-4 text-[#03254B]"
           style={{
-            fontFamily: "var(--font-fraunces), Georgia, serif",
+            fontFamily: "var(--font-inter), Helvetica, Arial, sans-serif",
             borderBottom: "none",
             marginTop: 0,
           }}
         >
           Jump to a Topic
         </h2>
-        <ul className="grid grid-cols-2 md:grid-cols-3 gap-y-2 gap-x-6 text-[14px] list-none pl-0">
+        <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-2 gap-x-6 text-[14px] list-none pl-0">
           {categories.map((c) => (
             <li key={c.heading} className="pl-0">
               <a
@@ -181,7 +181,7 @@ export default function VideosPage() {
           className="my-12 scroll-mt-24"
         >
           <h2>{cat.heading}</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {cat.items.map((v) => (
               <div key={v.id + v.title}>
                 <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
@@ -196,10 +196,10 @@ export default function VideosPage() {
                   />
                 </div>
                 <h3
-                  className="text-[16px] mt-3 text-[#03254B]"
+                  className="text-[14px] mt-2 text-[#03254B] leading-tight"
                   style={{
-                    fontFamily: "var(--font-fraunces), Georgia, serif",
-                    fontWeight: 500,
+                    fontFamily: "var(--font-inter), Helvetica, Arial, sans-serif",
+                    fontWeight: 600,
                   }}
                 >
                   {v.title}

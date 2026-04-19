@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import { JsonLd, legalServiceSchema } from "./components/StructuredData";
 import "./globals.css";
 
@@ -8,8 +8,8 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const playfair = Playfair_Display({
+  variable: "--font-fraunces", // keep the CSS var name so existing refs still work
   subsets: ["latin"],
   style: ["normal", "italic"],
 });
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Law Office of A. James Mullaney",
   },
   description:
-    "Jacksonville family-law attorney and Florida Supreme Court–certified mediator with 25+ years of experience in uncontested divorce, mediation, and parenting plans. Call 904-364-4565.",
+    "Jacksonville family-law attorney and Florida Supreme Court-certified mediator with 25+ years of experience in uncontested divorce, mediation, and parenting plans. Call 904-364-4565.",
   applicationName: "Law Office of A. James Mullaney",
   authors: [{ name: "A. James Mullaney" }],
   keywords: [
@@ -64,7 +64,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
         <JsonLd data={legalServiceSchema} />
       </head>
