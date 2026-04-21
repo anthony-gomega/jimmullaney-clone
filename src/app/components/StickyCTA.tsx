@@ -75,10 +75,10 @@ export default function StickyCTA() {
         </div>
       </div>
 
-      {/* Desktop: floating pill after scroll */}
+      {/* Desktop: rounded pill that slides in after scroll */}
       {!dismissed && (
         <div
-          className={`hidden lg:flex fixed bottom-6 right-6 z-40 transition-all duration-500 ${
+          className={`hidden lg:flex fixed bottom-8 right-8 z-40 items-center gap-3 transition-all duration-500 ${
             showDesktop
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-6 pointer-events-none"
@@ -86,46 +86,43 @@ export default function StickyCTA() {
           role="complementary"
           aria-label="Free consultation"
         >
-          <div className="flex items-stretch bg-[#03254B] shadow-2xl">
-            {/* Accent column */}
-            <div className="flex items-center justify-center px-5 bg-[#03254B] border-r border-white/15">
-              <div>
-                <div
-                  className="text-[10px] uppercase tracking-[2px] text-[#E0B158] font-semibold"
-                  style={{ fontFamily: "var(--font-inter), Helvetica, Arial, sans-serif" }}
-                >
-                  Free Consultation
-                </div>
-                <a
-                  href="tel:+1-904-364-4565"
-                  className="text-white text-[20px] font-bold block"
-                  style={{ fontFamily: "var(--font-inter), Helvetica, Arial, sans-serif" }}
-                >
-                  904-364-4565
-                </a>
-              </div>
-            </div>
-            {/* Contact action */}
-            <Link
-              href="/contact"
-              className="bg-[#8B2635] hover:bg-[#6F1D2A] text-white px-6 flex items-center gap-2 uppercase font-semibold tracking-[2px] text-[12px] transition-colors"
-              style={{ fontFamily: "var(--font-inter), Helvetica, Arial, sans-serif" }}
-            >
-              Message Jim
+          {/* Phone (icon-only FAB) */}
+          <a
+            href="tel:+1-904-364-4565"
+            aria-label="Call 904-364-4565"
+            title="Call 904-364-4565"
+            className="w-14 h-14 rounded-full bg-[#03254B] hover:bg-[#051a3e] text-white flex items-center justify-center shadow-[0_8px_24px_rgba(3,37,75,0.35)] transition-colors"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+            </svg>
+          </a>
+
+          {/* Consultation pill */}
+          <Link
+            href="/contact"
+            className="group relative inline-flex items-center gap-2.5 bg-[#03254B] hover:bg-[#051a3e] text-white rounded-full pl-6 pr-5 py-3.5 shadow-[0_8px_24px_rgba(3,37,75,0.35)] transition-colors"
+            style={{ fontFamily: "var(--font-inter), Helvetica, Arial, sans-serif" }}
+          >
+            <span className="text-[13px] font-semibold tracking-wide">
+              Schedule a Free Consultation
+            </span>
+            <span className="w-6 h-6 rounded-full bg-[#E0B158] text-[#03254B] flex items-center justify-center">
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
-            </Link>
-            {/* Dismiss */}
-            <button
-              type="button"
-              onClick={() => setDismissed(true)}
-              aria-label="Dismiss"
-              className="text-white/60 hover:text-white px-2 text-[18px] leading-none self-start pt-1"
-            >
-              ×
-            </button>
-          </div>
+            </span>
+          </Link>
+
+          {/* Dismiss */}
+          <button
+            type="button"
+            onClick={() => setDismissed(true)}
+            aria-label="Dismiss"
+            className="w-7 h-7 rounded-full bg-white/90 hover:bg-white text-[#03254B] flex items-center justify-center text-[14px] leading-none shadow"
+          >
+            ×
+          </button>
         </div>
       )}
 

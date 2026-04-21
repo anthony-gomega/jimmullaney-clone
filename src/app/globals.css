@@ -114,8 +114,24 @@ body {
 .inner-content h3 { font-size: 22px; line-height: 1.4; margin-top: 1.5rem; margin-bottom: 0.75rem; }
 .inner-content h4 { font-size: 18px; line-height: 1.4; margin-top: 1.25rem; margin-bottom: 0.5rem; }
 .inner-content p { margin-bottom: 1rem; }
-.inner-content a { color: #8B2635; text-decoration: underline; }
-.inner-content a:hover { color: #6F1D2A; }
+/* Only style prose links — keep styled buttons / CTAs / asides untouched. */
+.inner-content p a,
+.inner-content li a,
+.inner-content h1 a,
+.inner-content h2 a,
+.inner-content h3 a,
+.inner-content h4 a,
+.inner-content blockquote a {
+  color: #8B2635;
+  text-decoration: underline;
+}
+.inner-content p a:hover,
+.inner-content li a:hover,
+.inner-content h2 a:hover,
+.inner-content h3 a:hover,
+.inner-content h4 a:hover {
+  color: #6F1D2A;
+}
 .inner-content ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
 .inner-content ol { list-style: decimal; padding-left: 1.5rem; margin-bottom: 1rem; }
 .inner-content ul li, .inner-content ol li { margin-bottom: 0.5rem; }
