@@ -22,19 +22,19 @@ type FAQ = {
 
 const faqs: FAQ[] = [
   {
-    q: "How long does a divorce take in Florida?",
+    q: "How long does a Florida divorce take?",
     aPlain:
-      "An uncontested divorce in Florida typically takes 30 to 90 days from filing to final judgment. Florida requires a mandatory 20-day waiting period between filing and the final hearing. Contested divorces usually take 6 to 18 months or longer.",
+      "An uncontested divorce in Florida typically takes 30 to 90 days from filing to final judgment. Florida requires a mandatory 20-day waiting period between filing and the final hearing. Contested divorces — where the spouses disagree on property, support, or parenting — usually take 6 to 18 months or longer.",
     a: (
       <p>
         An uncontested divorce in Florida typically takes{" "}
-        <strong>30 to 90 days</strong> from filing to final judgment. Florida
-        requires a mandatory 20-day waiting period between the date you file
-        and the date the final hearing can be held. Contested divorces — where
-        the spouses disagree on property, support, or parenting — usually take
-        6 to 18 months or longer.{" "}
+        <strong>30 to 90 days</strong> from filing to final judgment.
+        Florida requires a mandatory 20-day waiting period between the date
+        you file and the date the final hearing can be held. Contested
+        divorces — where the spouses disagree on property, support, or
+        parenting — usually take 6 to 18 months or longer.{" "}
         <Link href="/divorce/uncontested-divorce-in-jacksonville-fl">
-          Learn more about uncontested divorce in Jacksonville
+          Learn more about uncontested divorce
         </Link>
         .
       </p>
@@ -47,7 +47,7 @@ const faqs: FAQ[] = [
     a: (
       <p>
         Florida uses the <strong>Income Shares Model</strong> under Florida
-        Statutes §61.30. The court combines both parents&apos; net monthly
+        Statutes §61.30. The court combines both parents&apos; monthly net
         incomes, looks up the minimum monthly need on the statutory schedule
         based on the number of children, and divides that need between the
         parents in proportion to their incomes. When both parents have at
@@ -69,8 +69,8 @@ const faqs: FAQ[] = [
       <p>
         Effective July 1, 2023, Florida law includes a{" "}
         <strong>rebuttable presumption that equal (50/50) time-sharing is
-        in the best interest of minor children</strong>. A parent who wants a
-        different arrangement must prove by a preponderance of the evidence
+        in the best interest of minor children</strong>. A parent who wants
+        a different arrangement must prove by a preponderance of the evidence
         that equal time-sharing is not in the children&apos;s best interest.
         Florida no longer uses the term &ldquo;custody&rdquo; — cases use{" "}
         <Link href="/time-sharing-and-visitation-in-florida">
@@ -81,71 +81,82 @@ const faqs: FAQ[] = [
     ),
   },
   {
-    q: "What are the residency requirements to file for divorce in Florida?",
+    q: "How do I establish paternity in Florida?",
     aPlain:
-      "To file for divorce in Florida, at least one spouse must have been a Florida resident for a minimum of 6 months before filing. You must prove residency with a Florida driver's license, voter registration, or witness testimony. The 6-month requirement cannot be waived.",
+      "Florida recognizes three ways to establish paternity: (1) marriage — parents who marry after the birth establish paternity automatically; (2) a signed Voluntary Acknowledgment of Paternity, which becomes binding after 60 days; or (3) a court order entered in a paternity case under Florida Statutes Chapter 742. Putting a father's name on the birth certificate alone does not give him enforceable legal rights.",
     a: (
       <p>
-        To file for divorce in Florida, <strong>at least one spouse must have
-        been a Florida resident for a minimum of 6 months</strong> before the
-        petition is filed. Residency is typically proven with a Florida
-        driver&apos;s license, voter registration card, or corroborating
-        witness testimony. The 6-month requirement cannot be waived.
+        Florida recognizes three ways to establish paternity:{" "}
+        <strong>(1) marriage</strong> — parents who marry after the birth
+        establish paternity automatically; <strong>(2) a signed Voluntary
+        Acknowledgment of Paternity</strong>, which becomes binding 60 days
+        after signing; or <strong>(3) a court order</strong> entered in a
+        paternity case under Florida Statutes Chapter 742. Putting a
+        father&apos;s name on the birth certificate alone does{" "}
+        <em>not</em> give him enforceable legal rights to time-sharing or
+        decision-making.{" "}
+        <Link href="/paternity">Learn more about Florida paternity</Link>.
       </p>
     ),
   },
   {
-    q: "How much does a divorce cost in Jacksonville?",
+    q: "How do I get a domestic violence injunction in Florida?",
     aPlain:
-      "An uncontested divorce in Jacksonville typically costs a flat fee in the low thousands of dollars, plus the Duval County filing fee of approximately $410. A contested divorce that goes to trial usually costs $15,000 to $50,000 or more per spouse depending on complexity, discovery, and experts involved.",
+      "You file a sworn petition at the circuit court describing the specific acts that justify protection. No filing fee applies for a §741.30 domestic-violence petition. If the facts show an immediate and present danger, the judge can issue a temporary ex parte injunction the same day, lasting up to 15 days. A full hearing with both parties present typically follows within 15 days to decide whether a final injunction will issue.",
     a: (
       <p>
-        An <strong>uncontested divorce in Jacksonville</strong> typically runs
-        a flat fee in the low thousands of dollars plus the Duval County filing
-        fee (approximately $410). A <strong>contested divorce</strong> that
-        proceeds through discovery and trial usually runs $15,000 to $50,000
-        or more per spouse, depending on case complexity, business valuations,
-        expert witnesses, and the number of contested issues. Call me at{" "}
-        <a href="tel:+1-904-364-4565">904-364-4565</a> for a flat-fee quote
-        on your uncontested matter.
-      </p>
-    ),
-  },
-  {
-    q: "Is alimony still permanent in Florida?",
-    aPlain:
-      "No. Effective July 1, 2023, Florida abolished permanent alimony. Florida now recognizes four types of alimony: temporary, bridge-the-gap (up to 2 years), rehabilitative, and durational — with length caps of 50% of a short marriage (under 10 years), 60% of a moderate marriage (10-20 years), and 75% of a long marriage (20+ years). Retirement at normal retirement age is grounds to modify or terminate alimony.",
-    a: (
-      <p>
-        <strong>No. Effective July 1, 2023, Florida abolished permanent
-        alimony.</strong> Florida now recognizes four types of alimony:
-        temporary, bridge-the-gap (up to 2 years), rehabilitative, and
-        durational. Durational alimony is capped at 50% of a short marriage
-        (under 10 years), 60% of a moderate marriage (10&ndash;20 years), and
-        75% of a long marriage (20+ years). Retirement at normal retirement
-        age is now grounds to modify or terminate alimony.{" "}
-        <Link href="/divorce/alimony">Learn more about Florida alimony</Link>.
-      </p>
-    ),
-  },
-  {
-    q: "Do both spouses have to agree to get divorced in Florida?",
-    aPlain:
-      "No. Florida is a no-fault divorce state, and only one spouse needs to testify that the marriage is 'irretrievably broken' for the court to grant the divorce. The other spouse cannot block the divorce itself, though they can contest specific terms like property division, alimony, child support, and time-sharing.",
-    a: (
-      <p>
-        <strong>No. Florida is a no-fault divorce state.</strong> Only one
-        spouse needs to testify that the marriage is{" "}
-        &ldquo;irretrievably broken&rdquo; for the court to grant the
-        divorce. The other spouse cannot block the divorce itself, though
-        they can contest specific terms like{" "}
-        <Link href="/divorce/equitable-distribution">property division</Link>,{" "}
-        <Link href="/divorce/alimony">alimony</Link>,{" "}
-        <Link href="/divorce/child-support">child support</Link>, and{" "}
-        <Link href="/time-sharing-and-visitation-in-florida">
-          time-sharing
+        You file a <strong>sworn petition</strong> at the circuit court
+        describing the specific acts that justify protection. No filing fee
+        applies for a §741.30 domestic-violence petition. If the facts show
+        an immediate and present danger, the judge can issue a{" "}
+        <strong>temporary ex parte injunction</strong> the same day, lasting
+        up to 15 days. A full hearing with both parties present typically
+        follows within 15 days to decide whether a final injunction will
+        issue, and for how long.{" "}
+        <Link href="/domestic-violence">
+          Learn more about Florida domestic-violence injunctions
         </Link>
         .
+      </p>
+    ),
+  },
+  {
+    q: "What makes a Florida prenuptial agreement enforceable?",
+    aPlain:
+      "Under Florida's Uniform Premarital Agreement Act (§61.079), a prenup must be in writing, signed voluntarily by both parties, and supported by full financial disclosure. Each party should have independent counsel, and the agreement must not be unconscionable. Signing too close to the wedding date creates a presumption of duress that courts heavily scrutinize — thirty days minimum before the wedding is a safe benchmark.",
+    a: (
+      <p>
+        Under Florida&apos;s <strong>Uniform Premarital Agreement Act
+        (§61.079)</strong>, a prenup must be <strong>in writing, signed
+        voluntarily</strong> by both parties, and supported by{" "}
+        <strong>full financial disclosure</strong>. Each party should have
+        independent counsel, and the agreement must not be unconscionable.
+        Signing too close to the wedding creates a presumption of duress that
+        courts heavily scrutinize — <em>thirty days minimum</em> before the
+        wedding is a safe benchmark; ninety days or more is better.{" "}
+        <Link href="/prenuptial-agreements">
+          Learn more about Florida prenuptial agreements
+        </Link>
+        .
+      </p>
+    ),
+  },
+  {
+    q: "Can I modify my child support or parenting plan in Florida?",
+    aPlain:
+      "Yes, but the legal standard is strict. Florida requires a substantial, material, and unanticipated change in circumstances. For child support, the change must produce a guideline amount at least 15% or $50 different (whichever is greater) from the current order. Time-sharing modifications face an even higher bar and must also be in the child's best interest. Modifications apply only from the date the petition is filed, so filing promptly matters.",
+    a: (
+      <p>
+        Yes, but the standard is strict. Florida requires a{" "}
+        <strong>substantial, material, and unanticipated change in
+        circumstances</strong>. For child support, the change must produce
+        a guideline amount at least <strong>15% or $50</strong> different
+        (whichever is greater) from the current order. Time-sharing
+        modifications face an even higher bar and must also be in the
+        child&apos;s best interest. Modifications apply{" "}
+        <em>only from the date the petition is filed</em>, so filing
+        promptly matters.{" "}
+        <Link href="/modifications">Learn more about modifications</Link>.
       </p>
     ),
   },
