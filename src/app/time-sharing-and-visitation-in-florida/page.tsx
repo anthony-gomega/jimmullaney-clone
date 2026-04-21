@@ -1,4 +1,5 @@
 import InnerPage from "../components/InnerPage";
+import InlineCTA from "../components/InlineCTA";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -75,6 +76,11 @@ export default function ParentingPlansPage() {
           rights to phone, video, and text contact with each parent.
         </li>
       </ul>
+
+      <InlineCTA
+        title="Negotiating a parenting plan?"
+        subtitle="A well-drafted plan prevents years of future disputes. I draft plans that address the scenarios most parents never think about until they become problems."
+      />
 
       <h2>Best-Interest Factors</h2>
       <p>

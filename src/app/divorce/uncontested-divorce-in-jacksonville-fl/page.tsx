@@ -1,4 +1,5 @@
 import InnerPage from "../../components/InnerPage";
+import InlineCTA from "../../components/InlineCTA";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -99,6 +100,11 @@ export default function UncontestedDivorcePage() {
           assets, and liabilities.
         </li>
       </ul>
+
+      <InlineCTA
+        title="Not sure if uncontested is right for your case?"
+        subtitle="Most couples think their situation is more complicated than it actually is. A quick 10-minute call can usually tell you which path fits."
+      />
 
       <h2>What I Do For You</h2>
       <p>

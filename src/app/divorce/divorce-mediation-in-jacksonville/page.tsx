@@ -1,4 +1,5 @@
 import InnerPage from "../../components/InnerPage";
+import InlineCTA from "../../components/InlineCTA";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -77,6 +78,11 @@ export default function MediationPage() {
           creative, tailored solutions a judge cannot order.
         </li>
       </ul>
+
+      <InlineCTA
+        title="Book a mediation or a consultation"
+        subtitle="Florida Supreme Court–certified family court mediator. 25+ years of experience helping Jacksonville families resolve cases outside the courtroom."
+      />
 
       <h2>Issues Mediation Can Address</h2>
       <p>

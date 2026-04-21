@@ -1,4 +1,5 @@
 import InnerPage from "../components/InnerPage";
+import InlineCTA from "../components/InlineCTA";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -43,6 +44,11 @@ export default function PaternityPage() {
         <li>Health-insurance coverage through the father&apos;s employer</li>
         <li>The father&apos;s consent being required for adoption or name change</li>
       </ul>
+
+      <InlineCTA
+        title="Start or respond to a paternity case"
+        subtitle="Whether you are a mother seeking support or a father establishing time-sharing, acting early preserves your rights and saves money."
+      />
 
       <h2>Three Ways to Establish Paternity in Florida</h2>
       <p>There are three legally recognized ways:</p>

@@ -1,4 +1,5 @@
 import InnerPage from "../../components/InnerPage";
+import InlineCTA from "../../components/InlineCTA";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -93,6 +94,11 @@ export default function AlimonyPage() {
         <li>Responsibilities each spouse will have with respect to minor children</li>
         <li>Adultery, only to the extent it involves the dissipation of marital assets</li>
       </ul>
+
+      <InlineCTA
+        title="Modeling an alimony scenario?"
+        subtitle="Alimony and child support interact in ways that change the final number significantly. I can model the scenarios so you know what to expect before you negotiate."
+      />
 
       <h2>How Amounts Are Calculated</h2>
       <p>

@@ -1,4 +1,5 @@
 import InnerPage from "../components/InnerPage";
+import InlineCTA from "../components/InlineCTA";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -54,6 +55,11 @@ export default function DomesticViolencePage() {
           course of harassment or cyberstalking.
         </li>
       </ul>
+
+      <InlineCTA
+        title="Need protection today? Or served with an injunction petition?"
+        subtitle="These cases move fast and the stakes are high. Confidential same-day consultation by phone."
+      />
 
       <h2>How the Process Works</h2>
       <ol>

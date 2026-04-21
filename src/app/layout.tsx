@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import { JsonLd, legalServiceSchema } from "./components/StructuredData";
+import StickyCTA from "./components/StickyCTA";
 import "./globals.css";
 
 const inter = Inter({
@@ -73,6 +74,7 @@ export default function RootLayout({
         style={{ fontFamily: "var(--font-inter), Helvetica, Arial, sans-serif" }}
       >
         {children}
+        <StickyCTA />
       </body>
     </html>
   );

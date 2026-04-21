@@ -1,4 +1,5 @@
 import InnerPage from "../../../../components/InnerPage";
+import InlineCTA from "../../../../components/InlineCTA";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -54,9 +55,24 @@ export default async function BlogPostPage({
     >
       <p className="text-sm text-gray-500 italic mb-6 mt-0">{post.date}</p>
 
-      {post.body.map((paragraph, i) => (
-        <p key={i}>{paragraph}</p>
-      ))}
+      {post.body.map((paragraph, i) => {
+        // Drop an InlineCTA after the 3rd paragraph so readers who scanned
+        // the opening have a conversion path before the related-posts list.
+        const insertCTAAfter = Math.min(3, Math.floor(post.body.length / 2));
+        return (
+          <div key={i}>
+            <p>{paragraph}</p>
+            {i === insertCTAAfter && post.body.length > 4 && (
+              <InlineCTA
+                title={`Questions about ${post.title.split("?")[0].split(":")[0].trim().slice(0, 70)}?`}
+                subtitle="Get a direct, no-pressure answer from a family-law attorney with 25+ years of Florida experience."
+              />
+            )}
+          </div>
+        );
+      })}
+
+      <InlineCTA />
 
       <hr className="my-10 border-[#03254B]/15" />
 
