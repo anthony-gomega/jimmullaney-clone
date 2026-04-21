@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Testimonials from "./components/Testimonials";
+import HomeFAQ from "./components/HomeFAQ";
 import Reveal from "./components/Reveal";
 import {
   DivorceIcon,
@@ -591,6 +592,7 @@ export default function Home() {
         <Reveal><EducationSection /></Reveal>
         <Reveal><MeetAttorneySection /></Reveal>
         <Reveal><Testimonials /></Reveal>
+        <Reveal><HomeFAQ /></Reveal>
         <Reveal><QuestionnaireSection /></Reveal>
         <Reveal><CTASection /></Reveal>
         <QuestionsBar />
