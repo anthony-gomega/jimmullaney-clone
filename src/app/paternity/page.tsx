@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Jacksonville Paternity Lawyer | Florida Family Law Attorney",
   description:
-    "Jacksonville paternity attorney with 25+ years of experience establishing paternity, parenting plans, and child support under Florida Statutes Chapter 742. Call 904-364-4565.",
+    "Jacksonville paternity attorney with 25+ years of experience establishing paternity, parenting plans, and child support under Florida Statutes Chapter 742. Call 904-858-4334.",
   alternates: { canonical: "/paternity" },
 };
 
@@ -156,7 +156,7 @@ export default function PaternityPage() {
         parenting plan and support order, contest or confirm paternity with
         DNA testing, or address the rare but complicated cases where the
         biological and legal fathers are different. Call{" "}
-        <a href="tel:+1-904-364-4565">904-364-4565</a> or{" "}
+        <a href="tel:+1-904-858-4334">904-858-4334</a> or{" "}
         <Link href="/contact">contact me online</Link> to schedule a
         consultation.
       </p>

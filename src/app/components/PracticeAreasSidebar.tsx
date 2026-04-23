@@ -56,10 +56,10 @@ export default function PracticeAreasSidebar() {
           Contact us for a consultation.
         </p>
         <a
-          href="tel:+1-904-364-4565"
+          href="tel:+1-904-858-4334"
           className="text-white font-bold text-[18px] block mb-3"
         >
-          904-364-4565
+          904-858-4334
         </a>
         <Link
           href="/contact"

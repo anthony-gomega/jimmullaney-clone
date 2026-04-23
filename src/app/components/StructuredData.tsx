@@ -13,7 +13,7 @@ export function JsonLd({ data }: { data: Record<string, unknown> | Record<string
 }
 
 const BASE_URL = "https://jimmullaney-clone.vercel.app";
-const PHONE = "+1-904-364-4565";
+const PHONE = "+1-904-858-4334";
 const ADDRESS = {
   "@type": "PostalAddress",
   streetAddress: "8777 San Jose Blvd. Ste. 302",

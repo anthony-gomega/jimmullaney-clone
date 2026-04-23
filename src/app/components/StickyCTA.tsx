@@ -51,7 +51,7 @@ export default function StickyCTA() {
       >
         <div className="grid grid-cols-2 gap-0">
           <a
-            href="tel:+1-904-364-4565"
+            href="tel:+1-904-858-4334"
             className="bg-[#8B2635] text-white py-4 flex items-center justify-center gap-2 font-semibold uppercase tracking-wider text-[13px]"
             style={{ fontFamily: "var(--font-inter), Helvetica, Arial, sans-serif" }}
           >
@@ -86,9 +86,9 @@ export default function StickyCTA() {
       >
         {/* Phone (icon-only FAB) */}
         <a
-          href="tel:+1-904-364-4565"
-          aria-label="Call 904-364-4565"
-          title="Call 904-364-4565"
+          href="tel:+1-904-858-4334"
+          aria-label="Call 904-858-4334"
+          title="Call 904-858-4334"
           className="w-14 h-14 rounded-full bg-[#03254B] hover:bg-[#051a3e] text-white flex items-center justify-center shadow-[0_8px_24px_rgba(3,37,75,0.35)] transition-colors"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">

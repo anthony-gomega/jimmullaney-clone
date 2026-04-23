@@ -117,7 +117,7 @@ export default function Page() {
         </Link>{" "}
         walks through a simplified version of this math. For a binding
         calculation for your case, call{" "}
-        <a href="tel:+1-904-364-4565">904-364-4565</a> or{" "}
+        <a href="tel:+1-904-858-4334">904-858-4334</a> or{" "}
         <Link href="/contact">contact me online</Link>.
       </p>
     </InnerPage>

@@ -206,8 +206,8 @@ export default function HomeFAQ() {
           <p className="text-[#03254B]/75 text-[16px] leading-[1.7]">
             Direct, statute-specific answers to the questions I hear most often
             from Jacksonville clients. For advice tailored to your case, call{" "}
-            <a href="tel:+1-904-364-4565" className="text-[#8B2635] underline">
-              904-364-4565
+            <a href="tel:+1-904-858-4334" className="text-[#8B2635] underline">
+              904-858-4334
             </a>
             .
           </p>

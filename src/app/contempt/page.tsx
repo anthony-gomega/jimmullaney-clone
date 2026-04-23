@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Jacksonville Contempt Lawyer | Enforcing Florida Family Law Orders",
   description:
-    "Enforce or defend against contempt of a Florida family-law order. 25+ years of experience with child support, alimony, and parenting-plan enforcement. Call 904-364-4565.",
+    "Enforce or defend against contempt of a Florida family-law order. 25+ years of experience with child support, alimony, and parenting-plan enforcement. Call 904-858-4334.",
   alternates: { canonical: "/contempt" },
 };
 
@@ -168,7 +168,7 @@ export default function ContemptPage() {
       <p>
         Whether you need to enforce a judgment against a noncompliant
         spouse or defend against a contempt motion, I can help. Call{" "}
-        <a href="tel:+1-904-364-4565">904-364-4565</a> or{" "}
+        <a href="tel:+1-904-858-4334">904-858-4334</a> or{" "}
         <Link href="/contact">contact me online</Link>.
       </p>
     </InnerPage>

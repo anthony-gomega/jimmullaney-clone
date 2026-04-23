@@ -12,10 +12,10 @@ export default function GetHelpBar() {
         </h3>
         <div className="flex items-center gap-6">
           <a
-            href="tel:+1-904-364-4565"
+            href="tel:+1-904-858-4334"
             className="text-white text-[18px] font-semibold hover:underline"
           >
-            904-364-4565
+            904-858-4334
           </a>
           <Link
             href="/contact"

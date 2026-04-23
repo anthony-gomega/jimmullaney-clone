@@ -60,7 +60,7 @@ export default function DisclaimerPage() {
         <br />
         Jacksonville, FL 32217
         <br />
-        Phone: <a href="tel:+1-904-364-4565">904-364-4565</a>
+        Phone: <a href="tel:+1-904-858-4334">904-858-4334</a>
       </p>
     </InnerPage>
   );

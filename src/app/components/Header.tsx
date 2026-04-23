@@ -196,7 +196,7 @@ export default function Header() {
 
         <div className="flex items-center gap-3 flex-shrink-0">
           <a
-            href="tel:+1-904-364-4565"
+            href="tel:+1-904-858-4334"
             className="hidden lg:inline-flex items-center gap-2 bg-[#8B2635] hover:bg-[#6F1D2A] text-white font-bold text-[17px] px-7 py-4 transition-colors"
             style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
           >
@@ -208,7 +208,7 @@ export default function Header() {
             >
               <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
             </svg>
-            904-364-4565
+            904-858-4334
           </a>
 
           <button
@@ -261,11 +261,11 @@ export default function Header() {
             ))}
             <li className="px-6 py-4 bg-gray-50">
               <a
-                href="tel:+1-904-364-4565"
+                href="tel:+1-904-858-4334"
                 className="block text-center bg-[#8B2635] text-white font-bold px-5 py-3"
                 style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
               >
-                Call 904-364-4565
+                Call 904-858-4334
               </a>
             </li>
           </ul>

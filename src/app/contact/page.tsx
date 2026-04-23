@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact a Jacksonville Family Law Attorney | Schedule a Consultation",
   description:
-    "Contact the Law Office of A. James Mullaney in Jacksonville, FL. Call 904-364-4565 or message us to schedule a confidential family-law consultation with Jim directly.",
+    "Contact the Law Office of A. James Mullaney in Jacksonville, FL. Call 904-858-4334 or message us to schedule a confidential family-law consultation with Jim directly.",
   alternates: { canonical: "/contact" },
 };
 
@@ -34,7 +34,7 @@ export default function ContactPage() {
           </p>
           <p>
             <strong>Phone:</strong>{" "}
-            <a href="tel:+1-904-364-4565">904-364-4565</a>
+            <a href="tel:+1-904-858-4334">904-858-4334</a>
           </p>
           <h3>Office Hours</h3>
           <p>

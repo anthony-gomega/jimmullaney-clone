@@ -140,10 +140,10 @@ export default function Footer() {
                     Phone
                   </span>
                   <a
-                    href="tel:+1-904-364-4565"
+                    href="tel:+1-904-858-4334"
                     className="text-[#8B2635] font-bold text-[17px] hover:underline"
                   >
-                    904-364-4565
+                    904-858-4334
                   </a>
                 </p>
                 <p className="mt-3 text-[13px]">

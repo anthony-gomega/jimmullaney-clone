@@ -70,7 +70,7 @@ export default function PrivacyPage() {
       <h2>Your Rights</h2>
       <p>
         You have the right to request access to, correction of, or deletion of
-        your personal information. Contact us at 904-364-4565 with any
+        your personal information. Contact us at 904-858-4334 with any
         requests.
       </p>
 
@@ -83,7 +83,7 @@ export default function PrivacyPage() {
       <h2>Contact Us</h2>
       <p>
         If you have questions about this Privacy Policy, please contact us at{" "}
-        <a href="tel:+1-904-364-4565">904-364-4565</a>.
+        <a href="tel:+1-904-858-4334">904-858-4334</a>.
       </p>
     </InnerPage>
   );

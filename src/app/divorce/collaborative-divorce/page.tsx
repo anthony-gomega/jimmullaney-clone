@@ -113,7 +113,7 @@ export default function CollaborativeDivorcePage() {
       <p>
         I am a Florida Supreme Court&ndash;certified family-court mediator
         and participate in collaborative cases in Jacksonville. Call{" "}
-        <a href="tel:+1-904-364-4565">904-364-4565</a> or{" "}
+        <a href="tel:+1-904-858-4334">904-858-4334</a> or{" "}
         <Link href="/contact">contact me online</Link> to discuss whether
         collaborative divorce is a fit for your situation.
       </p>

@@ -178,7 +178,7 @@ export default function MediationPage() {
 
       <p>
         To schedule a mediation or discuss representation in mediation, call{" "}
-        <a href="tel:+1-904-364-4565">904-364-4565</a> or{" "}
+        <a href="tel:+1-904-858-4334">904-858-4334</a> or{" "}
         <Link href="/contact">contact me online</Link>.
       </p>
     </InnerPage>

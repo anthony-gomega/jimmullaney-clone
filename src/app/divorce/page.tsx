@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Jacksonville Divorce Lawyer | 25+ Years of Florida Family Law",
   description:
-    "Jacksonville divorce lawyer and certified mediator focused on efficient, cost-effective dissolution. 25+ years of exclusive Florida family-law practice. Call 904-364-4565.",
+    "Jacksonville divorce lawyer and certified mediator focused on efficient, cost-effective dissolution. 25+ years of exclusive Florida family-law practice. Call 904-858-4334.",
   alternates: { canonical: "/divorce" },
 };
 
@@ -111,7 +111,7 @@ export default function DivorcePage() {
         At Law Office of A. James Mullaney, I am ready to provide guidance and
         assistance tailored to your unique situation. Contact me today to
         schedule a consultation. Reach out by calling{" "}
-        <a href="tel:+1-904-364-4565">904-364-4565</a> or by using my{" "}
+        <a href="tel:+1-904-858-4334">904-858-4334</a> or by using my{" "}
         <Link href="/contact">online contact form</Link>.
       </p>
     </InnerPage>

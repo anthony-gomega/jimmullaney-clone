@@ -152,7 +152,7 @@ export default function MilitaryDivorcePage() {
         and military spouses in Florida and Georgia for over 25 years. I
         know the DFAS process, the SBP deadlines, the local court practice
         around deployment stays, and the drafting language that actually
-        works. Call <a href="tel:+1-904-364-4565">904-364-4565</a> or{" "}
+        works. Call <a href="tel:+1-904-858-4334">904-858-4334</a> or{" "}
         <Link href="/contact">contact me online</Link>.
       </p>
     </InnerPage>

@@ -159,7 +159,7 @@ export default function AnnulmentPage() {
 
       <p>
         To discuss whether an annulment is an option in your case, call{" "}
-        <a href="tel:+1-904-364-4565">904-364-4565</a> or{" "}
+        <a href="tel:+1-904-858-4334">904-858-4334</a> or{" "}
         <Link href="/contact">contact me online</Link>.
       </p>
     </InnerPage>

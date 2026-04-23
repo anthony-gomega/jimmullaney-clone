@@ -10,7 +10,7 @@ import { JsonLd, attorneySchema, breadcrumbSchema } from "../../components/Struc
 export const metadata: Metadata = {
   title: "A. James Mullaney — Jacksonville Family Law Attorney & Mediator",
   description:
-    "Meet A. James Mullaney, a Jacksonville family-law attorney with 25+ years of exclusive family-law practice and Florida Supreme Court mediator certification. Call 904-364-4565.",
+    "Meet A. James Mullaney, a Jacksonville family-law attorney with 25+ years of exclusive family-law practice and Florida Supreme Court mediator certification. Call 904-858-4334.",
   alternates: { canonical: "/attorney/mullaney-a-james" },
   openGraph: {
     title: "A. James Mullaney — Jacksonville Family Law Attorney & Mediator",
@@ -132,11 +132,11 @@ export default function AttorneyPage() {
 
             <div className="flex flex-wrap gap-3">
               <a
-                href="tel:+1-904-364-4565"
+                href="tel:+1-904-858-4334"
                 className="inline-flex items-center gap-2 bg-[#8B2635] hover:bg-[#6F1D2A] text-white uppercase font-semibold tracking-[2px] text-[13px] px-6 py-3 transition-colors"
                 style={{ fontFamily: "var(--font-inter), Helvetica, Arial, sans-serif" }}
               >
-                Call 904-364-4565
+                Call 904-858-4334
               </a>
               <Link
                 href="/contact"
@@ -187,7 +187,7 @@ export default function AttorneyPage() {
                 </p>
 
                 <p>
-                  Please call <a href="tel:+1-904-364-4565">904-364-4565</a> or{" "}
+                  Please call <a href="tel:+1-904-858-4334">904-858-4334</a> or{" "}
                   <Link href="/contact">contact me online</Link> to schedule a
                   consultation.
                 </p>

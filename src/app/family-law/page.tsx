@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Jacksonville Family Law Attorney | Law Office of A. James Mullaney",
   description:
-    "A full-service Jacksonville family-law practice: uncontested divorce, mediation, contested divorce, paternity, child support, time-sharing, and more. Call 904-364-4565.",
+    "A full-service Jacksonville family-law practice: uncontested divorce, mediation, contested divorce, paternity, child support, time-sharing, and more. Call 904-858-4334.",
   alternates: { canonical: "/family-law" },
 };
 
@@ -157,7 +157,7 @@ export default function FamilyLawPage() {
 
       <p>
         To discuss your family law matter, call{" "}
-        <a href="tel:+1-904-364-4565">904-364-4565</a> or{" "}
+        <a href="tel:+1-904-858-4334">904-858-4334</a> or{" "}
         <Link href="/contact">contact me online</Link>.
       </p>
     </InnerPage>

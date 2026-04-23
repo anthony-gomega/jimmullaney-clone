@@ -220,7 +220,7 @@ export default function VideosPage() {
           my YouTube channel
         </a>
         . If there is a topic you&apos;d like me to cover, call{" "}
-        <a href="tel:+1-904-364-4565">904-364-4565</a> or{" "}
+        <a href="tel:+1-904-858-4334">904-858-4334</a> or{" "}
         <Link href="/contact">contact me online</Link>.
       </p>
     </InnerPage>

@@ -121,11 +121,11 @@ export default function AboutPage() {
 
             <div className="flex flex-wrap gap-3">
               <a
-                href="tel:+1-904-364-4565"
+                href="tel:+1-904-858-4334"
                 className="inline-flex items-center gap-2 bg-[#8B2635] hover:bg-[#6F1D2A] text-white uppercase font-semibold tracking-[2px] text-[13px] px-6 py-3 transition-colors"
                 style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
               >
-                Call 904-364-4565
+                Call 904-858-4334
               </a>
               <Link
                 href="/contact"

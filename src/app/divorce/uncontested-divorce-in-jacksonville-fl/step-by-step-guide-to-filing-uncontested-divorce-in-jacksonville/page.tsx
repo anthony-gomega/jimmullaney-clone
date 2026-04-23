@@ -85,7 +85,7 @@ export default function Page() {
       </p>
 
       <p>
-        Ready to begin? Call <a href="tel:+1-904-364-4565">904-364-4565</a> or{" "}
+        Ready to begin? Call <a href="tel:+1-904-858-4334">904-858-4334</a> or{" "}
         <Link href="/contact">contact me online</Link>.
       </p>
     </InnerPage>

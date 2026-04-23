@@ -18,7 +18,7 @@ type Review = {
 
 const reviews: Review[] = [
   {
-    name: "Angela Lee",
+    name: "Angela L.",
     date: "Jun 2025",
     source: "Google",
     rating: 5,
@@ -26,7 +26,7 @@ const reviews: Review[] = [
       "I am really impressed by this firm's professionalism, attention to detail, care and commitment to my case. Every step was explained, my inquiries were answered, and personal interest was taken by way of being available when I had issues to discuss. From start to finish, I felt taken care of and that my case was in good hands. I absolutely recommend this law office for anyone who is looking for transparency, integrity, and personal interaction for your case.",
   },
   {
-    name: "Beau Bonin",
+    name: "Beau B.",
     date: "May 2025",
     source: "Google",
     rating: 5,
@@ -42,7 +42,7 @@ const reviews: Review[] = [
       "James Mullaney is the best in the business. Knowledgeable about everything and made my case a breeze. I highly recommend him to anyone looking for a family lawyer.",
   },
   {
-    name: "Catherine Heidersbach",
+    name: "Catherine H.",
     date: "Apr 2025",
     source: "Google",
     rating: 5,
@@ -50,7 +50,7 @@ const reviews: Review[] = [
       "Jim was very professional and always available to answer my questions along the way. He made the process a lot less stressful.",
   },
   {
-    name: "Madison Cunningham",
+    name: "Madison C.",
     date: "May 2025",
     source: "Google",
     rating: 5,
@@ -102,14 +102,14 @@ const reviews: Review[] = [
       "Jim is a great lawyer to work with, honest and reliable. I had a great experience working with him. I would recommend him very much!",
   },
   {
-    name: "Shannon Skidmore",
+    name: "Shannon S.",
     date: "Google",
     source: "Google",
     rating: 5,
     body: "I would highly recommend his services to friends and family.",
   },
   {
-    name: "Chase Baker",
+    name: "Chase B.",
     date: "Google",
     source: "Google",
     rating: 5,

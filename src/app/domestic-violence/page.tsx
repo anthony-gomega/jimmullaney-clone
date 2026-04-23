@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Jacksonville Domestic Violence Lawyer | Florida Injunctions §741.30",
   description:
-    "Jacksonville domestic violence injunction attorney. Representation for petitioners seeking protection and respondents defending against allegations. Call 904-364-4565.",
+    "Jacksonville domestic violence injunction attorney. Representation for petitioners seeking protection and respondents defending against allegations. Call 904-858-4334.",
   alternates: { canonical: "/domestic-violence" },
 };
 
@@ -174,7 +174,7 @@ export default function DomesticViolencePage() {
       <h2>How I Can Help</h2>
       <p>
         For a confidential consultation, call{" "}
-        <a href="tel:+1-904-364-4565">904-364-4565</a> or{" "}
+        <a href="tel:+1-904-858-4334">904-858-4334</a> or{" "}
         <Link href="/contact">contact me online</Link>.
       </p>
     </InnerPage>

@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Jacksonville Prenuptial Agreement Lawyer | Florida Prenup & Postnup Attorney",
   description:
-    "Draft a valid, enforceable Florida prenuptial or postnuptial agreement with an attorney who has spent 25+ years handling family-law matters. Call 904-364-4565.",
+    "Draft a valid, enforceable Florida prenuptial or postnuptial agreement with an attorney who has spent 25+ years handling family-law matters. Call 904-858-4334.",
   alternates: { canonical: "/prenuptial-agreements" },
 };
 
@@ -138,7 +138,7 @@ export default function PrenupPage() {
         Whether you are drafting your first prenup, revising an old one,
         negotiating as the receiving spouse, or challenging a prenup in
         divorce, I have over 25 years of Florida family-law experience to
-        draw on. Call <a href="tel:+1-904-364-4565">904-364-4565</a> or{" "}
+        draw on. Call <a href="tel:+1-904-858-4334">904-858-4334</a> or{" "}
         <Link href="/contact">contact me online</Link>.
       </p>
     </InnerPage>

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | Law Office of A. James Mullaney",
   },
   description:
-    "Jacksonville family-law attorney and Florida Supreme Court-certified mediator with 25+ years of experience in uncontested divorce, mediation, and parenting plans. Call 904-364-4565.",
+    "Jacksonville family-law attorney and Florida Supreme Court-certified mediator with 25+ years of experience in uncontested divorce, mediation, and parenting plans. Call 904-858-4334.",
   applicationName: "Law Office of A. James Mullaney",
   authors: [{ name: "A. James Mullaney" }],
   keywords: [

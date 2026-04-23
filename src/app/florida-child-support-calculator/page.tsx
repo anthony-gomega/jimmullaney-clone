@@ -267,7 +267,7 @@ export default function CalculatorPage() {
   function handleEmail(e: React.FormEvent) {
     e.preventDefault();
     alert(
-      "The email-results feature is currently suspended due to overuse/abuse by a few South Florida law firms. Please copy the numbers shown above and contact us at 904-364-4565 if you'd like a formal Guidelines Worksheet.",
+      "The email-results feature is currently suspended due to overuse/abuse by a few South Florida law firms. Please copy the numbers shown above and contact us at 904-858-4334 if you'd like a formal Guidelines Worksheet.",
     );
   }
 
@@ -298,7 +298,7 @@ export default function CalculatorPage() {
         federal tax the way the court program does, and implements the
         §61.30(11)(b) gross-up formula automatically. Results are estimates;
         for a binding calculation for your case, call{" "}
-        <a href="tel:+1-904-364-4565">904-364-4565</a>.
+        <a href="tel:+1-904-858-4334">904-858-4334</a>.
       </p>
 
       <form onSubmit={handleSubmit} className="not-prose space-y-8 my-10">
@@ -458,7 +458,7 @@ export default function CalculatorPage() {
             Estimate only. The court program uses each parent&apos;s actual
             tax situation, including credits, deductions, and imputed-income
             analyses. For an exact calculation, call{" "}
-            <a href="tel:+1-904-364-4565" className="underline">904-364-4565</a>.
+            <a href="tel:+1-904-858-4334" className="underline">904-858-4334</a>.
           </p>
         </div>
       )}
@@ -505,7 +505,7 @@ export default function CalculatorPage() {
       <h2>Talk to a Florida Child Support Lawyer</h2>
       <p>
         If you are still uncertain about child support or another family-law
-        issue, call me at <a href="tel:+1-904-364-4565">904-364-4565</a> or{" "}
+        issue, call me at <a href="tel:+1-904-858-4334">904-858-4334</a> or{" "}
         <Link href="/contact">send me an email</Link> to set up a
         confidential consultation.
       </p>

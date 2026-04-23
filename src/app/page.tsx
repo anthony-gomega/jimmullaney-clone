@@ -87,14 +87,14 @@ function Hero() {
               </svg>
             </Link>
             <a
-              href="tel:+1-904-364-4565"
+              href="tel:+1-904-858-4334"
               className="inline-flex items-center gap-2 border-2 border-white text-white uppercase font-bold tracking-wider text-[14px] px-8 py-4 hover:bg-white hover:text-[#131E4D] transition-all"
               style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
               </svg>
-              904-364-4565
+              904-858-4334
             </a>
           </div>
         </div>
@@ -546,10 +546,10 @@ function CTASection() {
           level of service. If you are ready to speak with an attorney, call me
           now at{" "}
           <a
-            href="tel:+1-904-364-4565"
+            href="tel:+1-904-858-4334"
             className="underline font-semibold text-white"
           >
-            904-364-4565
+            904-858-4334
           </a>
           . You can also reach me using my{" "}
           <Link href="/contact" className="underline font-semibold text-white">

@@ -39,7 +39,7 @@ export default function InlineCTA({
         </div>
         <div className="flex flex-col sm:flex-row gap-3 md:flex-col lg:flex-row flex-shrink-0">
           <a
-            href="tel:+1-904-364-4565"
+            href="tel:+1-904-858-4334"
             className="inline-flex items-center justify-center gap-2 bg-[#8B2635] hover:bg-[#6F1D2A] text-white uppercase font-semibold tracking-[2px] text-[12px] px-5 py-3 transition-colors whitespace-nowrap"
             style={{
               fontFamily: "var(--font-inter), Helvetica, Arial, sans-serif",
@@ -48,7 +48,7 @@ export default function InlineCTA({
             <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor">
               <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
             </svg>
-            904-364-4565
+            904-858-4334
           </a>
           <Link
             href="/contact"

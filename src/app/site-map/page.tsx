@@ -73,7 +73,7 @@ export default function SiteMapPage() {
       <p>
         Contact: 8777 San Jose Blvd. Ste. 302, Jacksonville, FL 32217
         <br />
-        Phone: <a href="tel:+1-904-364-4565">904-364-4565</a>
+        Phone: <a href="tel:+1-904-858-4334">904-858-4334</a>
       </p>
 
       <div className="grid md:grid-cols-2 gap-8 mt-8">

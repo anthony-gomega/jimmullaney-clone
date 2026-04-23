@@ -90,7 +90,7 @@ export default async function BlogPostPage({
 
       <p className="mt-10">
         Have questions about your own family-law situation? Call{" "}
-        <a href="tel:+1-904-364-4565">904-364-4565</a> or{" "}
+        <a href="tel:+1-904-858-4334">904-858-4334</a> or{" "}
         <Link href="/contact">contact me online</Link>.
       </p>
     </InnerPage>

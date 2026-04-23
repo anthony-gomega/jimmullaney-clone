@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Jacksonville Child Support Lawyer | Florida §61.30 Guidelines",
   description:
-    "Jacksonville child-support attorney. Calculate, modify, or enforce Florida child support. 25+ years of family-law experience. Free online calculator. Call 904-364-4565.",
+    "Jacksonville child-support attorney. Calculate, modify, or enforce Florida child support. 25+ years of family-law experience. Free online calculator. Call 904-858-4334.",
   alternates: { canonical: "/divorce/child-support" },
 };
 
@@ -183,7 +183,7 @@ export default function ChildSupportPage() {
         Whether you need an initial calculation, a formal Guidelines
         Worksheet for court or mediation, a modification of an existing
         order, or help enforcing unpaid support, I can help. Call{" "}
-        <a href="tel:+1-904-364-4565">904-364-4565</a> or{" "}
+        <a href="tel:+1-904-858-4334">904-858-4334</a> or{" "}
         <Link href="/contact">contact me online</Link>.
       </p>
     </InnerPage>
